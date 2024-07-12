@@ -56,7 +56,6 @@ export default {};
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss'; 
-// @import '../../../shared/assets/styles/variables.scss'; 
 .header {
   position: absolute;
   max-width: 1440px;
@@ -90,13 +89,17 @@ export default {};
   }
 }
 
+.nav__list {
+  @extend %p4;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  @extend %p4;
+  
   color: $white;
 
   &__categories:not(:last-child) {

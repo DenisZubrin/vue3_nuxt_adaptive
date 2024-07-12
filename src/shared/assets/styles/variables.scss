@@ -20,7 +20,7 @@ $gradient_opacity_0: rgba(15, 15, 14, 0);
 $gradient_opacity_1: rgba(15, 15, 14, 1);
 
 //font sizes
-@mixin font($size, $weight, $height, $case: none) {
+@mixin font($size, $height, $weight, $case: none) {
   font-size: $size;
   font-weight: $weight;
   line-height: $height;
