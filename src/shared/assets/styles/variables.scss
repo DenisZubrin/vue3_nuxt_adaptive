@@ -28,73 +28,73 @@ $gradient_opacity_1: rgba(15, 15, 14, 1);
 }
 //headings
 %h1 {
-  @include font(48px, 120%, 600, uppercase);
+  @include font(48px, 1.2, 600, uppercase);
 }
 %h2 {
-  @include font(36px, 120%, 600, uppercase);
+  @include font(36px, 1.2, 600, uppercase);
 }
 %h3 {
-  @include font(32px, 120%, 600);
+  @include font(32px, 1.2, 600);
 }
 %h4 {
-  @include font(24px, 120%, 600);
+  @include font(24px, 1.2, 600);
 }
 %h5 {
-  @include font(20px, 120%, 600);
+  @include font(20px, 1.2, 600);
 }
 %h6 {
-  @include font(18px, 120%, 600);
+  @include font(18px, 1.2, 600);
 }
 
 //subtitles
 
 %s1 {
-  @include font(24px, 120%, 500);
+  @include font(24px, 1.2, 500);
 }
 %s2 {
-  @include font(20px, 120%, 500);
+  @include font(20px, 1.2, 500);
 }
 %s3 {
-  @include font(18px, 120%, 500);
+  @include font(18px, 1.2, 500);
 }
 %s4 {
-  @include font(16px, 120%, 500);
+  @include font(16px, 1.2, 500);
 }
 %s5 {
-  @include font(12px, 120%, 500);
+  @include font(12px, 1.2, 500);
 }
 
 //paragraphs
 %p1 {
-  @include font(24px, 120%, 400);
+  @include font(24px, 1.2, 400);
 }
 %p2 {
-  @include font(18px, 135%, 400);
+  @include font(18px, 1.35, 400);
 }
 %p3 {
-  @include font(16px, 145%, 400);
+  @include font(16px, 1.45, 400);
 }
 %p4 {
-  @include font(14px, 145%, 400);
+  @include font(14px, 1.45, 400);
 }
 %p5 {
-  @include font(12px, 120%, 400);
+  @include font(12px, 1.2, 400);
 }
 
 //buttons
 %button_l {
-  @include font(18px, 120%, 500);
+  @include font(18px, 1.2, 500);
 }
 %button_m {
-  @include font(16px, 120%, 500);
+  @include font(16px, 1.2, 500);
 }
 %button_s {
-  @include font(14px, 120%, 500);
+  @include font(14px, 1.2, 500);
 }
 //other
 %num {
-  @include font(42px, 120%, 600);
+  @include font(42px, 1.2, 600);
 }
 %banner_link {
-  @include font(18px, 135%, 500);
+  @include font(18px, 1.35, 500);
 }

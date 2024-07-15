@@ -1,3 +1,5 @@
+@import './reset.min.css';
+
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/inter/static/Inter-Regular.ttf');
@@ -17,9 +19,6 @@
 }
 
 body {
-  margin: 0 auto;
-  max-width: 1440px;
-  width: 100%;
   background-color: black;
   font-family: 'Inter';
 }
