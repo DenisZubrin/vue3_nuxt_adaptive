@@ -158,7 +158,7 @@ export default {};
   background-color: $black;
 
   div &__container {
-    padding: 0 20px 100px;
+    padding: 0 40px 100px;
   }
 
   &__heading {
@@ -179,7 +179,7 @@ export default {};
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 
@@ -200,6 +200,7 @@ export default {};
 
     &_big {
       width: 668px;
+      // width: calc(50% - 24px);
       min-height: 560px;
       flex-direction: row;
       justify-content: space-between;

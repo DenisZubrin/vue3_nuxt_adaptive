@@ -45,7 +45,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 0 20px 40px;
+    padding: 0 40px 40px;
   }
 
   &__text {

@@ -88,7 +88,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 100px 20px;
+    padding: 100px 40px;
     gap: 24px 0px;
   }
 

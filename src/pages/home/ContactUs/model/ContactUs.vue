@@ -88,7 +88,7 @@ export default {};
   }
 
   div &__container {
-    padding: 85.5px 20px;
+    padding: 85.5px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,7 +114,7 @@ export default {};
   &__link-to-top {
     position: absolute;
     bottom: 24px;
-    right: 20px;
+    right: 40px;
   }
 
   &__arrow-icon {

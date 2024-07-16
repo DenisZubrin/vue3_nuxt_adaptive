@@ -121,9 +121,9 @@ export default {
 @import '@/shared/assets/styles/variables.scss';
 .container {
   margin: 0 auto;
-  max-width: 1480px; 
+  max-width: 1440px; 
   width: 100%;
-  padding: 0 20px;
+  padding: 0 40px;
 }
 
 //Swiper стили
