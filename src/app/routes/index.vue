@@ -83,6 +83,8 @@
         </Slide></swiper-slide
       >
     </swiper>
+    <Info />
+
   </main>
 </template>
 <script>
@@ -93,10 +95,12 @@ import 'swiper/scss/pagination';
 import 'swiper/scss/mousewheel';
 
 import Slide from '@/pages/home/Slide';
+import Info from '@/pages/home/Info';
 
 export default {
   components: {
     Slide,
+    Info,
     Swiper,
     SwiperSlide,
   },

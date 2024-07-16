@@ -151,11 +151,13 @@ export default {};
   }
 
   &:hover > &__list {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 
   &__list {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 28px;
     left: -12px;
