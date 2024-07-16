@@ -40,12 +40,12 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__container {
+  div &__container {
     min-height: 860px;
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding-bottom: 40px;
+    padding: 0 20px 40px;
   }
 
   &__text {

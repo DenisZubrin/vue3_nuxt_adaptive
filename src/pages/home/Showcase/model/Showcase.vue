@@ -7,8 +7,10 @@
         реалистичную и атмосферную картину
       </p>
       <div class="showcase__articles">
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card article-card_big showcase__article">
+        <a href="#" class="article-card">
+          <article
+            class="article-card__container article-card__container_big showcase__article"
+          >
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_1.png"
               alt="bg"
@@ -37,8 +39,10 @@
             </span>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card article-card_big showcase__article">
+        <a href="#" class="article-card">
+          <article
+            class="article-card__container article-card__container_big showcase__article"
+          >
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_2.png"
               alt="bg"
@@ -49,8 +53,8 @@
             </div>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card showcase__article">
+        <a href="#" class="article-card">
+          <article class="article-card__container showcase__article">
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
               alt="bg"
@@ -63,8 +67,8 @@
             </div>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card showcase__article">
+        <a href="#" class="article-card">
+          <article class="article-card__container showcase__article">
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_4.png"
               alt="bg"
@@ -94,8 +98,8 @@
             </span>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card showcase__article">
+        <a href="#" class="article-card">
+          <article class="article-card__container showcase__article">
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_5.png"
               alt="bg"
@@ -108,8 +112,10 @@
             </div>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card article-card_big showcase__article">
+        <a href="#" class="article-card">
+          <article
+            class="article-card__container article-card__container_big showcase__article"
+          >
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_6.png"
               alt="bg"
@@ -122,8 +128,10 @@
             </div>
           </article>
         </a>
-        <a href="#" class="article-card__wrapper-link">
-          <article class="article-card article-card_big showcase__article">
+        <a href="#" class="article-card">
+          <article
+            class="article-card__container article-card__container_big showcase__article"
+          >
             <img
               src="@/shared/assets/img/backgrounds/showcase_article_bg_7.png"
               alt="bg"
@@ -147,8 +155,11 @@ export default {};
 @import '@/shared/assets/styles/variables.scss';
 
 .showcase {
-  background-color: $gray80;
-  padding: 100px 20px;
+  background-color: $black;
+
+  div &__container {
+    padding: 0 20px 100px;
+  }
 
   &__heading {
     margin: 0 auto 24px;
@@ -168,37 +179,35 @@ export default {};
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-  }
-
-  &__article {
+    justify-content: center;
   }
 }
 
 .article-card {
-  width: 437px;
-  min-height: 370px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding: 24px;
-  box-sizing: border-box;
-  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 8px;
 
-  &_big {
-    width: 668px;
-    min-height: 560px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: end;
+  &__container {
+    width: 437px;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 24px;
+    box-sizing: border-box;
+    position: relative;
+
+    &_big {
+      width: 668px;
+      min-height: 560px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+    }
   }
 
-  &__wrapper-link {
-    text-decoration: none;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
-  &__wrapper-link:hover &__bg {
+  &__container:hover &__bg {
     transform: scale(1);
     filter: brightness(30%);
   }
@@ -211,7 +220,7 @@ export default {};
     z-index: 0;
     top: 0;
     left: 0;
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
     transform: scale(1.1);
     filter: brightness(50%);
   }

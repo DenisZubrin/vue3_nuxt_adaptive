@@ -94,7 +94,7 @@ export default {};
 @import '@/shared/assets/styles/variables.scss';
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 2;
 
@@ -102,7 +102,6 @@ export default {};
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
   }
   &__burger {
     display: none;

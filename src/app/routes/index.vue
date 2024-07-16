@@ -1,6 +1,7 @@
 <template>
   <main class="main">
     <swiper
+      name="top"
       :direction="'vertical'"
       :slides-per-view="1"
       :pagination="{ clickable: true }"
@@ -85,7 +86,7 @@
     </swiper>
     <Info />
     <Showcase />
-
+    <ContactUs />
   </main>
 </template>
 <script>
@@ -98,12 +99,14 @@ import 'swiper/scss/mousewheel';
 import Slide from '@/pages/home/Slide';
 import Info from '@/pages/home/Info';
 import Showcase from '@/pages/home/Showcase';
+import ContactUs from '@/pages/home/ContactUs';
 
 export default {
   components: {
     Slide,
     Info,
     Showcase,
+    ContactUs,
     Swiper,
     SwiperSlide,
   },
@@ -118,8 +121,9 @@ export default {
 @import '@/shared/assets/styles/variables.scss';
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1480px; 
   width: 100%;
+  padding: 0 20px;
 }
 
 //Swiper стили

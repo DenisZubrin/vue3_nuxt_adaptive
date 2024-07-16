@@ -1,6 +1,6 @@
 <template >
     <section class="info">
-      <div class="container info__container">
+      <div class="info__container container">
         <div class="info__card">
           <h3 class="info__heading">Мы – студия <br />3D-визуализации <br />3D4U</h3>
           <p class="info__description">Наш основной принцип – индивидуальный подход к каждому клиенту. Огромный опыт работы позволяет нам воплощать проекты любой сложности – от небольших элементов интерьера до комплексного решения многофункциональных центров.</p>
@@ -82,7 +82,9 @@ export default {
 }
 
 .info {
-  &__container {
+  background-color: $black;
+
+  div &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
