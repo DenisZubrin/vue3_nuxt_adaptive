@@ -84,6 +84,7 @@
       >
     </swiper>
     <Info />
+    <Showcase />
 
   </main>
 </template>
@@ -96,11 +97,13 @@ import 'swiper/scss/mousewheel';
 
 import Slide from '@/pages/home/Slide';
 import Info from '@/pages/home/Info';
+import Showcase from '@/pages/home/Showcase';
 
 export default {
   components: {
     Slide,
     Info,
+    Showcase,
     Swiper,
     SwiperSlide,
   },

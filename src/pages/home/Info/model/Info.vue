@@ -15,24 +15,24 @@
         </div>
         <div class="info__card info__card_aligned">
           <span class="info__stat-row">
-            <span class="info__number_big">17</span>лет опыта работы
+            <span class="info__number ">17</span>лет опыта работы
           </span>
           <span class="info__stat-row">
-            <span class="info__number_big">7000+</span>проектов разной степени сложности
+            <span class="info__number">7000+</span>проектов разной степени сложности
           </span>
           <span class="info__stat-row">
-            <span class="info__number_big">80+</span>клиентов в сфере производства мебели
+            <span class="info__number">80+</span>клиентов в сфере производства мебели
           </span>
         </div>
         <div class="info__card info__card_aligned">
           <span class="info__stat-row">
-            <span class="info__number_big">80+</span>клиентов в сфере производства мебели
+            <span class="info__number">80+</span>клиентов в сфере производства мебели
           </span>
           <span class="info__stat-row">
-            <span class="info__number_big">170</span>средний опыт сотрудника
+            <span class="info__number">170</span>средний опыт сотрудника
           </span>
           <span class="info__stat-row">
-            <span class="info__number_big">7000+</span>Мы входим в группу компаний ИНКОМ
+            <span class="info__number">7000+</span>Мы входим в группу компаний ИНКОМ
           </span>
         </div>
         <div class="info__card info__card_picture"></div>
@@ -129,7 +129,7 @@ export default {
     color: $white;
   }
 
-  &__number_big {
+  &__number {
     @extend %num;
     color: $white;
     display: block;
