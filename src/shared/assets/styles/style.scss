@@ -17,8 +17,19 @@
   src: url('../fonts/inter/static/Inter-SemiBold.ttf');
   font-weight: 600;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #1F1F1F;
   font-family: 'Inter';
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
 }

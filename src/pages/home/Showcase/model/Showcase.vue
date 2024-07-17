@@ -148,8 +148,7 @@
     </div>
   </section>
 </template>
-<script>
-export default {};
+<script setup>
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -200,7 +199,6 @@ export default {};
 
     &_big {
       width: 668px;
-      // width: calc(50% - 24px);
       min-height: 560px;
       flex-direction: row;
       justify-content: space-between;
@@ -231,6 +229,7 @@ export default {};
     z-index: 1;
     color: $white;
   }
+
   &__text {
     margin: 0 40px 0 0;
   }
@@ -254,6 +253,19 @@ export default {};
       height: 22px;
       fill: $white;
     }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .showcase {
+    &__articles {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .article-card__container {
+    min-width: 668px;
   }
 }
 </style>

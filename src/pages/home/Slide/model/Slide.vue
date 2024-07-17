@@ -1,6 +1,10 @@
 <template>
   <section class="slide">
-    <img class="slide__bg" :src="`/backgrounds/${image}`" alt="slider background" />
+    <img
+      class="slide__bg"
+      :src="`/backgrounds/${image}`"
+      alt="slider background"
+    />
     <div class="container slide__container">
       <div class="slide__text">
         <h2 class="slide__heading" name="heading">{{ heading }}</h2>
@@ -9,7 +13,7 @@
       <ul class="slide__list">
         <li v-for="(link, index) in links" :key="index" class="slide__item">
           <!-- Заменить на NuxtLink/RouteLink -->
-          <a href="#" class="slide__link">{{ link }}</a>
+          <Link class="slide__link" :text="link" />
           <svg
             class="slide__link-icon"
             viewBox="0 0 22 22"
@@ -24,35 +28,30 @@
     </div>
   </section>
 </template>
-<script>
-//переписать с script setup и defineProps(). Проблема с default 
-
-export default {
-  props: {
-    links: {
-      type: Array,
-      default: () => ['Ссылка 1', 'Ссылка 2'],
-    },
-    image: {
-      type: String,
-      default: () => '/backgrounds/slider_bg_1.png',
-    },
-    heading: {
-      type: String,
-      default: () => 'Заголовок',
-    },
-    description: {
-      type: String,
-      default: () => 'Описание',
-    },
+<script setup>
+import Link from '@/shared/UI/Link';
+defineProps({
+  links: {
+    type: Array,
   },
-};
+  image: {
+    type: String,
+    default: () => '/backgrounds/slider_bg_1.png',
+  },
+  heading: {
+    type: String,
+  },
+  description: {
+    type: String,
+  },
+});
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
 
 .slide {
   position: relative;
+  height: 100%;
 
   &__bg {
     position: absolute;
@@ -60,18 +59,18 @@ export default {
     bottom: 0;
     object-fit: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 0;
   }
 
   &__container {
-    min-height: 860px;
-    height: 100vh;
     display: flex;
+    height: 100%;
     justify-content: space-between;
     align-items: end;
     padding-bottom: 40px;
     box-sizing: border-box;
+    gap: 24px;
   }
 
   &__text {

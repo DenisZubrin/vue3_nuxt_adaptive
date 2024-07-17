@@ -46,9 +46,7 @@
             >
           </div>
         </div>
-        <button type="submit" class="button form__button" @submit.prevent>
-          Отправить
-        </button>
+        <Button class="form__button" type="submit" @submit.prevent :text="'Отправить'"/>
       </form>
       <a class="contact-us__link-to-top" href="#top">
         <svg
@@ -67,8 +65,8 @@
     </div>
   </section>
 </template>
-<script>
-export default {};
+<script setup>
+import Button from '@/shared/UI/Button';
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';

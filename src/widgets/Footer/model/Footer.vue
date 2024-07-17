@@ -88,75 +88,80 @@
         </div>
         <nav class="footer__sitemap">
           <ul class="footer__column footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >Визуализация мебели</a
-              >
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'Визуализация мебели'"
+              />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Мягкая мебель</a>
+              <Link class="footer__link" :text="'Мягкая мебель'" />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Корпусная мебель</a>
+              <Link class="footer__link" :text="'Корпусная мебель'" />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Обеденные группы</a>
+              <Link class="footer__link" :text="'Обеденные группые'" />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Двери</a>
-            </li>
-          </ul>
-          <ul class="footer__column footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >Дизайн-проекты</a
-              >
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Интерьеры</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Экстерьеры</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Торговые помещения</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">3D-туры</a>
+              <Link class="footer__link" :text="'Двери'" />
             </li>
           </ul>
           <ul class="footer__column footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >Верстка каталогов</a
-              >
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'Дизайн-проекты'"
+              />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >Онлайн-конструктор</a
-              >
+              <Link class="footer__link" :text="'Интерьеры'" />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >О компании</a
-              >
+              <Link class="footer__link" :text="'Экстерьеры'" />
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link_highlighted"
-                >Контакты</a
-              >
+              <Link class="footer__link" :text="'Торговые помещения'" />
+            </li>
+            <li class="footer__item">
+              <Link class="footer__link" :text="'3D-туры'" />
             </li>
           </ul>
-          <address class="address footer__column">
-            <a href="tel:+79656369353" class="address__phone"
-              >+7 (965) 63-69-353</a
-            >
-            <a href="mailto:3d4u@bk.ru" class="address__email">3d4u@bk.ru</a>
-            <p class="address__office">
-              <span class="address__office-building"
+          <ul class="footer__column footer__list">
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'Верстка каталогов'"
+              />
+            </li>
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'Онлайн-конструктор'"
+              />
+            </li>
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'О компании'"
+              />
+            </li>
+            <li class="footer__item footer__item_margin">
+              <Link
+                class="footer__link footer__link_highlighted"
+                :text="'Контакты'"
+              />
+            </li>
+          </ul>
+          <address class="footer__address footer__column">
+            <Link class="footer__phone" :text="'+7 (965) 63-69-353'" :href="'tel:+79656369353'"/>
+            
+            <a href="mailto:3d4u@bk.ru" class="footer__email">3d4u@bk.ru</a>
+            <p class="footer__office">
+              <span class="footer__office-building"
                 >г. Пенза, ул. Дружбы, 6 (Технопарк "Яблочков"), оф. 415</span
               >
-              <span class="address__office-worktime"
+              <span class="footer__office-worktime"
                 >пн-пт с 9:00 до 17:00</span
               >
             </p>
@@ -168,19 +173,29 @@
           <li class="footer__copyright">
             <span class="footer__link">© 2024 3D4U. Все права защищены</span>
           </li>
-          <li class="footer__copyright"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
-          <li class="footer__copyright"><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+          <li class="footer__copyright">
+            <Link class="footer__link" :text="'Пользовательское соглашение'" />
+          </li>
+          <li class="footer__copyright">
+            <Link class="footer__link" :text="'Политика конфиденциальности'" />
+          </li>
         </ul>
         <div class="footer__created-by">
-          <img src="../../../shared/assets/img/icons/INKOM_logo.svg" alt="INKOM logo">
-          <img src="../../../shared/assets/img/icons/match_logo.svg" alt="MATCH logo">
+          <a href="#" class="footer__company-link"><img class="footer__company-logo"
+            src="../../../shared/assets/img/icons/INKOM_logo.svg"
+            alt="INKOM logo"
+          /></a>
+          <a href="#" class="footer__company-link"><img class="footer__company-logo"
+            src="../../../shared/assets/img/icons/match_logo.svg"
+            alt="MATCH logo"
+          /></a>
         </div>
       </div>
     </div>
   </footer>
 </template>
-<script>
-export default {};
+<script setup>
+import Link from '@/shared/UI/Link';
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -191,6 +206,7 @@ export default {};
   &__container {
     padding: 40px;
   }
+
   &__logo {
     &-container {
       flex-direction: column;
@@ -223,6 +239,7 @@ export default {};
 
   &__sitemap {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
     gap: 24px;
@@ -236,25 +253,55 @@ export default {};
 
   &__item {
     margin: 0 0 8px;
+
+    &_margin {
+      margin: 0 0 12px;
+    }
   }
- 
-  // вынести в shared как .link
 
   &__link {
-    text-decoration: none;
-    @extend %p4;
     color: $gray50;
-    border-bottom: 1px solid rgba($green, 0);
+    @extend %p4;
 
     &_highlighted {
       @extend %s4;
       color: $gray5;
     }
+  }
 
-    &:hover {
-      border-bottom: 1px solid rgba($green, 1);
-      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      color: $green;
+  &__address {
+    font-style: normal;
+  }
+
+  &__phone {
+    @extend %s2;
+    color: $gray5;
+    margin: 0 0 12px;
+    border-bottom: none;
+
+    :hover, :active {
+      border-bottom: none;
+    }
+  }
+
+  &__email {
+    @extend %p4;
+    color: $gray5;
+    margin: 0 0 12px;
+  }
+
+  &__office {
+    margin: 0;
+    @extend %p4;
+
+    &-building {
+      color: $gray5;
+      display: block;
+      width: 100%;
+    }
+
+    &-worktime {
+      color: $gray50;
     }
   }
 
@@ -277,36 +324,13 @@ export default {};
     display: flex;
     gap: 24px;
   }
-}
 
-.address {
-  font-style: normal;
+  &__company-logo {
+    opacity: 0.7;
+    cursor: pointer;
 
-  &__phone {
-    @extend %s2;
-    color: $gray5;
-    text-decoration: none;
-    margin: 0 0 12px;
-  }
-
-  &__email {
-    @extend %p4;
-    color: $gray5;
-    margin: 0 0 12px;
-  }
-
-  &__office {
-    margin: 0;
-    @extend %p4;
-
-    &-building {
-      color: $gray5;
-      display: block;
-      width: 100%;
-    }
-
-    &-worktime {
-      color: $gray50;
+    &:hover {
+      opacity: 1;
     }
   }
 }

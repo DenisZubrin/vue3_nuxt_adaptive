@@ -1,0 +1,27 @@
+.swiper {
+  width: 100%;
+  min-height: 100vh;
+  z-index: 0;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
+}
+
+.swiper-pagination {
+  margin: 0 40px 0 0;
+
+  &-bullet {
+    width: 6px;
+    height: 6px;
+    background-color: $gray5;
+
+    &-active {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      right: 2.5px;
+      background-color: $white;
+    }
+  }
+}

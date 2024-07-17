@@ -1,22 +1,16 @@
 <template>
-  <div>
+  <div class="app">
     <Header />
-    <main>
+    <main class="main">
       <!-- output the page content-->
       <slot />
     </main>
     <Footer />
   </div>
 </template>
-<script>
+<script setup>
 import Header from '@/widgets/Header';
 import Footer from '@/widgets/Footer';
 
-export default {
-  components: {
-    Header,
-    Footer
-  },
-};
 </script>
 <style lang="scss"></style>

@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <div class="header__burger burger">бургер</div>
+      <Burger class="header__burger"/>
       <!-- Вынести в shared -->
       <a href="/" class="logo header__logo">
         <figure class="logo__container">
@@ -43,9 +43,9 @@
               class="logo__icon-letter"
             />
           </svg>
-          <figcaption class="logo__caption header__logo-caption"
-            >Cтудия <br />3D-визуализации <br />3D FOR YOU</figcaption
-          >
+          <figcaption class="logo__caption header__logo-caption">
+            Cтудия <br />3D-визуализации <br />3D FOR YOU
+          </figcaption>
         </figure>
       </a>
       <!--  -->
@@ -53,7 +53,10 @@
         <ul class="nav__list">
           <li class="nav__item">
             <div class="select">
-              <a href="#" class="select__link nav__link">Визуализация мебели</a>
+              <Link
+                class="select__link nav__link"
+                :text="'Визуализация мебели'"
+              />
               <svg
                 class="select__icon"
                 viewBox="0 0 16 16"
@@ -65,24 +68,26 @@
               </svg>
               <ul class="select__list">
                 <li class="select__item">
-                  <a href="#" class="select__link"
-                    >Подбор комплектующих мебели</a
-                  >
+                  <Link
+                    class="select__link"
+                    :text="'Подбор комплектующих мебели'"
+                  />
                 </li>
                 <li class="select__item">
-                  <a href="#" class="select__link"
-                    >Подбор комплектующих мебели</a
-                  >
+                  <Link
+                    class="select__link"
+                    :text="'Подбор комплектующих мебели'"
+                  />
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Верстка каталогов</a>
+            <Link class="nav__link" :text="'Верстка каталогов'" />
           </li>
           <li class="nav__item">
             <div class="select">
-              <a href="#" class="select__link nav__link">Дизайн проектов</a>
+              <Link class="select__link nav__link" :text="'Дизайн проектов'" />
               <svg
                 class="select__icon"
                 viewBox="0 0 16 16"
@@ -94,33 +99,34 @@
               </svg>
               <ul class="select__list">
                 <li class="select__item">
-                  <a href="#" class="select__link">Проекты под заказ</a>
+                  <Link class="select__link" :text="'Проекты под заказ'" />
                 </li>
                 <li class="select__item">
-                  <a href="#" class="select__link">Готовые проекты</a>
+                  <Link class="select__link" :text="'Готовые проекты'" />
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">3D-тур</a>
+            <Link class="nav__link" :text="'3D-тур'" />
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Онлайн-конструктор</a>
+            <Link class="nav__link" :text="'Онлайн-конструктор'" />
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">О нас</a>
+            <Link class="nav__link" :text="'О нас'" />
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Контакты</a>
+            <Link class="nav__link" :text="'Контакты'" />
           </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
-<script>
-export default {};
+<script setup>
+import Link from '@/shared/UI/Link';
+import Burger from '@/widgets/Header/UI/Burger';
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -128,7 +134,8 @@ export default {};
 .header {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
+  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, .5) 50%);
 
   &__container {
     display: flex;
@@ -177,7 +184,7 @@ export default {};
     color: $white;
   }
 }
-// Стилизация select
+
 .select {
   position: relative;
   display: flex;
@@ -214,6 +221,7 @@ export default {};
     background-color: $gray80;
     min-width: 252px;
     padding: 0;
+    transition-delay: 0.3s; // костыль. Чтобы пользователь успел навестить на меню
   }
 
   &__item {
@@ -231,9 +239,8 @@ export default {};
       border-radius: 0 0 8px 8px;
     }
   }
-  &__item > &__link {
+  &__link {
     color: $white;
-    text-decoration: none;
   }
 }
 
@@ -243,22 +250,11 @@ export default {};
   min-height: 78px;
 
   &__list {
-    @extend %p4;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
-
-  &__item {
-    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-sizing: border-box;
-
-    &:hover {
-      color: $green;
-      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
   }
 
   &__item:not(:last-child) {
@@ -267,14 +263,6 @@ export default {};
 
   &__link {
     color: $white;
-    text-decoration: none;
-    border-bottom: 1px solid rgba($green, 0);
-
-    &:hover {
-      border-bottom: 1px solid rgba($green, 1);
-      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      color: $green;
-    }
   }
 }
 </style>
