@@ -188,7 +188,7 @@ export default {};
 .footer {
   background-color: $black;
 
-  div &__container {
+  &__container {
     padding: 40px;
   }
   &__logo {

@@ -1,93 +1,20 @@
 <template>
-  <main class="main">
-    <swiper
-      name="top"
-      :direction="'vertical'"
-      :slides-per-view="1"
-      :pagination="{ clickable: true }"
-      :modules="modules"
-      :mousewheel="true"
-    >
-      <!-- :autoHeight="true" :calculateHeight="true" -->
-      <swiper-slide
-        ><Slide
-          :links="[
-            'Корпусная мебель',
-            'Мягкая мебель',
-            'Обеденные группы',
-            'Двери',
-          ]"
-        >
-          <template #heading>
-            <h2 class="slider__heading">Визуализация мебели</h2>
-          </template>
-          <template #description>
-            <p class="slider__description">
-              Такой уровень реализма, что отличить смоделированную мебель от
-              реальной смогут лишь профессионалы.
-            </p>
-          </template>
-        </Slide></swiper-slide
-      >
-      <swiper-slide
-        ><Slide :links="['Смотреть проекты']">
-          <template #heading>
-            <h2 class="slider__heading">Верстка каталогов</h2>
-          </template>
-          <template #description>
-            <p class="slider__description">
-              Профессиональная верстка каталогов подчеркнет все достоинства
-              вашего товара и поможет грамотно его презентовать.
-            </p>
-          </template>
-        </Slide></swiper-slide
-      >
-      <swiper-slide
-        ><Slide :links="['Интерьеры', 'Экстерьеры', 'Торговые помещения']">
-          <template #heading>
-            <h2 class="slider__heading">Дизайн-проекты</h2>
-          </template>
-          <template #description>
-            <p class="slider__description">
-              От квартиры-студии до торгового центра – реалистичная
-              3D-визуализация с максимальной точностью покажет будущее
-              помещение.
-            </p>
-          </template>
-        </Slide></swiper-slide
-      >
-      <swiper-slide
-        ><Slide :links="['Смотреть проекты']">
-          <template #heading>
-            <h2 class="slider__heading">3D-тур</h2>
-          </template>
-          <template #description>
-            <p class="slider__description">
-              Современное решение для красочной и наглядной презентации
-              помещения. Прогуляйтесь по виртуальному объекту, не выходя из
-              дома.
-            </p>
-          </template>
-        </Slide></swiper-slide
-      >
-      <swiper-slide
-        ><Slide :links="['Смотреть проекты']">
-          <template #heading>
-            <h2 class="slider__heading">Онлайн-конструктор</h2>
-          </template>
-          <template #description>
-            <p class="slider__description">
-              Удобный и функциональный инструмент для визуализации и расчета
-              стоимости мебели в помещении.
-            </p>
-          </template>
-        </Slide></swiper-slide
-      >
-    </swiper>
-    <Info />
-    <Showcase />
-    <ContactUs />
-  </main>
+  <swiper
+    name="top"
+    :direction="'vertical'"
+    :slides-per-view="1"
+    :pagination="{ clickable: true }"
+    :modules="modules"
+    :mousewheel="{releaseOnEdges: true}"
+  >
+    <!-- :autoHeight="true" :calculateHeight="true" :releaseOnEdges="true"-->
+    <swiper-slide v-for="(slide, index) in slides" :key="index">
+      <Slide :heading="slide.heading" :description="slide.description" :image="slide.image" :links="slide.links"/>
+    </swiper-slide>
+  </swiper>
+  <Info />
+  <Showcase />
+  <ContactUs />
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -101,6 +28,8 @@ import Info from '@/pages/home/Info';
 import Showcase from '@/pages/home/Showcase';
 import ContactUs from '@/pages/home/ContactUs';
 
+import { reactive } from 'vue';
+
 export default {
   components: {
     Slide,
@@ -111,33 +40,69 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const slides = reactive([
+      {
+        image: 'slider_bg_1.png',
+        heading: 'Визуализация мебели',
+        description: 'Такой уровень реализма, что отличить смоделированную мебель от реальной смогут лишь профессионалы.',
+        links: [
+          'Корпусная мебель',
+          'Мягкая мебель',
+          'Обеденные группы',
+          'Двери',
+        ]
+      },
+      {
+        image: 'slider_bg_2.png',
+        heading: 'Верстка каталогов',
+        description: 'Профессиональная верстка каталогов подчеркнет все достоинства вашего товара и поможет грамотно его презентовать.',
+        links: ['Смотреть проекты']
+      },
+      {
+        image: 'slider_bg_3.png',
+        heading: 'Дизайн-проекты',
+        description: 'От квартиры-студии до торгового центра – реалистичная 3D-визуализация с максимальной точностью покажет будущее помещение.',
+        links: ['Интерьеры', 'Экстерьеры', 'Торговые помещения']
+      },
+      {
+        image: 'slider_bg_4.png',
+        heading: '3D-тур',
+        description: 'Современное решение для красочной и наглядной презентации помещения. Прогуляйтесь по виртуальному объекту, не выходя из дома.',
+        links: ['Смотреть проекты']
+      },
+      {
+        image: 'slider_bg_5.png',
+        heading: 'Онлайн-конструктор',
+        description: 'Удобный и функциональный инструмент для визуализации и расчета стоимости мебели в помещении.',
+        links: ['Смотреть проекты']
+      },
+    ]);
     return {
       modules: [Pagination, Mousewheel],
+      slides
     };
   },
 };
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
+
+// Настройки свайпера - в отдельный файл. Глобальные стили - в отдельный файл
 .container {
   margin: 0 auto;
-  max-width: 1440px; 
+  max-width: 1440px;
   width: 100%;
-  padding: 0 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 //Swiper стили
 
-.swiper {
-  // height: 100vh;
-  max-height: 886px;
+.swiper,
+.swiper-wrapper {
+  width: 100%;
+  height: 100vh;
   z-index: 0;
-}
-
-.swiper-slide {
-  // max-height: 886px;
-  // height: 100svh;
-  // height: 100%;
 }
 
 .swiper-pagination {

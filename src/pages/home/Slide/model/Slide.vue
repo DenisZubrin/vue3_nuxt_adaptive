@@ -1,15 +1,17 @@
 <template>
-  <section class="slider">
-    <div class="container slider__container">
-      <div class="slider__text">
-        <slot class="slider__heading" name="heading">Заголовок</slot>
-        <slot class="slider__description" name="description">Описание</slot>
+  <section class="slide">
+    <img class="slide__bg" :src="`/backgrounds/${image}`" alt="slider background" />
+    <div class="container slide__container">
+      <div class="slide__text">
+        <h2 class="slide__heading" name="heading">{{ heading }}</h2>
+        <p class="slide__description" name="description">{{ description }}</p>
       </div>
-      <ul class="slider__list">
-        <li v-for="(link, index) in links" :key="index" class="slider__item">
-          <a href="#" class="slider__link">{{ link }}</a>
+      <ul class="slide__list">
+        <li v-for="(link, index) in links" :key="index" class="slide__item">
+          <!-- Заменить на NuxtLink/RouteLink -->
+          <a href="#" class="slide__link">{{ link }}</a>
           <svg
-            class="slider__link-icon"
+            class="slide__link-icon"
             viewBox="0 0 22 22"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -23,11 +25,25 @@
   </section>
 </template>
 <script>
+//переписать с script setup и defineProps(). Проблема с default 
+
 export default {
   props: {
     links: {
       type: Array,
       default: () => ['Ссылка 1', 'Ссылка 2'],
+    },
+    image: {
+      type: String,
+      default: () => '/backgrounds/slider_bg_1.png',
+    },
+    heading: {
+      type: String,
+      default: () => 'Заголовок',
+    },
+    description: {
+      type: String,
+      default: () => 'Описание',
     },
   },
 };
@@ -35,21 +51,32 @@ export default {
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
 
-.slider {
-  background-image: url('@/shared/assets/img/backgrounds/header-bg_1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+.slide {
+  position: relative;
 
-  div &__container {
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  &__container {
     min-height: 860px;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: end;
-    padding: 0 40px 40px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
   }
 
   &__text {
     max-width: 668px;
+    z-index: 1;
   }
 
   &__heading {
@@ -71,6 +98,7 @@ export default {
     max-width: 417px;
     width: 100%;
     list-style-type: none;
+    z-index: 1;
   }
 
   &__item {

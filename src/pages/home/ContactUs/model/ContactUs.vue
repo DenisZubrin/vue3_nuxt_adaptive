@@ -87,8 +87,9 @@ export default {};
     filter: brightness(30%);
   }
 
-  div &__container {
-    padding: 85.5px 40px;
+  &__container {
+    padding-top: 85.5px;
+    padding-bottom: 85.5px;
     display: flex;
     flex-direction: column;
     justify-content: center;

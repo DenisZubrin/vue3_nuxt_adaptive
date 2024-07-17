@@ -11,7 +11,4 @@ export default defineNuxtConfig({
     layouts: './src/app/layouts',
   },
   modules: ['@nuxt/eslint'],
-  /*eslint: {
-    // options here
-  }*/
 });

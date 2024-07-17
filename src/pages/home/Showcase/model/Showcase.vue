@@ -157,8 +157,8 @@ export default {};
 .showcase {
   background-color: $black;
 
-  div &__container {
-    padding: 0 40px 100px;
+  &__container {
+    padding-bottom: 100px;
   }
 
   &__heading {

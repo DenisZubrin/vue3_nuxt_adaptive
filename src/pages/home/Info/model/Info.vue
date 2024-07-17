@@ -84,12 +84,13 @@ export default {
 .info {
   background-color: $black;
 
-  div &__container {
+  &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 100px 40px;
-    gap: 24px 0px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 24px;
   }
 
   &__card {
