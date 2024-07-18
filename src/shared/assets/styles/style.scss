@@ -1,4 +1,5 @@
 @import './reset.min.css';
+@import '@/shared/assets/styles/variables.scss';
 
 @font-face {
   font-family: 'Inter';
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
   font-family: 'Inter';
 }
 
@@ -32,4 +33,42 @@ body {
   width: 100%;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  @extend %p4;
+  color: $gray50;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: -2px;
+    height: 1px;
+    left: 0;
+    background-color: $green;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    color: $green;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

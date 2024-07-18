@@ -12,8 +12,7 @@
       </div>
       <ul class="slide__list">
         <li v-for="(link, index) in links" :key="index" class="slide__item">
-          <!-- Заменить на NuxtLink/RouteLink -->
-          <Link class="slide__link" :text="link" />
+          <NuxtLink class="link slide__link" to="#">{{ link }}</NuxtLink>
           <svg
             class="slide__link-icon"
             viewBox="0 0 22 22"
@@ -29,7 +28,7 @@
   </section>
 </template>
 <script setup>
-import Link from '@/shared/UI/Link';
+
 defineProps({
   links: {
     type: Array,
@@ -80,13 +79,13 @@ defineProps({
 
   &__heading {
     @extend %h1;
-    color: $white;
+    color: $gray5;
     margin: 0 0 24px;
   }
 
   &__description {
     @extend %p3;
-    color: $white;
+    color: $gray5;
     margin: 0;
     width: 85%;
   }
@@ -103,7 +102,6 @@ defineProps({
   &__item {
     padding: 12px 0;
     position: relative;
-    text-align: right;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -134,6 +132,33 @@ defineProps({
   &__link:hover ~ &__link-icon {
     fill: $green;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .slide {
+
+    &__container {
+      flex-direction: column;
+      justify-content: end;
+      align-items: start;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__heading {
+      font-size: 32px;
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__item {
+      justify-content: start;
+    }
   }
 }
 </style>

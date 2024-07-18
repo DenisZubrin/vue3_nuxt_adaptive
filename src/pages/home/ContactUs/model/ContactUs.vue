@@ -46,7 +46,12 @@
             >
           </div>
         </div>
-        <Button class="form__button" type="submit" @submit.prevent :text="'Отправить'"/>
+        <Button
+          class="form__button"
+          type="submit"
+          @submit.prevent
+          :text="'Отправить'"
+        />
       </form>
       <a class="contact-us__link-to-top" href="#top">
         <svg
@@ -101,13 +106,13 @@ import Button from '@/shared/UI/Button';
   &__heading {
     margin: 0 0 24px;
     @extend %h1;
-    color: $white;
+    color: $gray5;
   }
 
   &__description {
     margin: 0 0 48px;
     @extend %p4;
-    color: $white;
+    color: $gray5;
   }
 
   &__link-to-top {
@@ -163,7 +168,7 @@ import Button from '@/shared/UI/Button';
     border: none;
     border-bottom: 1px solid $gray5;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 16px 0;
+    padding: 20px 0;
     box-sizing: border-box;
 
     &::placeholder {
@@ -185,22 +190,24 @@ import Button from '@/shared/UI/Button';
     width: 100%;
 
     &-label {
+      display: inline-block;
+      width: 100%;
       @extend %p5;
       color: $gray30;
-      margin: 0 0 0 24px;
+      padding: 0 0 0 32px;
       position: relative;
 
       &::before {
         content: '';
         display: inline-block;
         position: absolute;
-        top: -2px;
-        left: -24px;
+        top: 0;
+        left: 0;
         width: 18px;
         height: 18px;
         border: 1px solid $white;
         border-radius: 2px;
-        transition-duration: .3s;
+        transition-duration: 0.3s;
         cursor: pointer;
       }
     }
@@ -220,6 +227,33 @@ import Button from '@/shared/UI/Button';
     border: none;
     cursor: pointer;
     padding: 20px 118px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact-us {
+    &__container {
+      padding: 60px 32px;
+    }
+
+    &__heading {
+      font-size: 32px;
+    }
+
+    &__link-to-top {
+      right: 16px;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+
+    &__text {
+      margin: 0 0 24px;
+    }
+    &__button {
+      width: 100%;
+    }
   }
 }
 </style>

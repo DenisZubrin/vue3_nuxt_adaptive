@@ -3,7 +3,7 @@
     <div class="footer__container container">
       <div class="footer__info">
         <div class="footer__column">
-          <a href="/" class="logo footer__logo">
+          <NavLink to="/" class="logo footer__logo">
             <figure class="logo__container footer__logo-container">
               <svg
                 viewBox="0 0 68 75"
@@ -84,86 +84,85 @@
                 Профессиональная <br />студия 3D-визуализации <br />3D FOR YOU
               </figcaption>
             </figure>
-          </a>
+          </NavLink>
         </div>
         <nav class="footer__sitemap">
           <ul class="footer__column footer__list">
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'Визуализация мебели'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >Визуализация мебели</NavLink
+              >
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Мягкая мебель'" />
+              <NavLink to="#" class="link footer__link">Мягкая мебель</NavLink>
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Корпусная мебель'" />
+              <NavLink to="#" class="link footer__link"
+                >Корпусная мебель</NavLink
+              >
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Обеденные группые'" />
+              <NavLink to="#" class="link footer__link"
+                >Обеденные группые</NavLink
+              >
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Двери'" />
+              <NavLink to="#" class="link footer__link">Двери</NavLink>
             </li>
           </ul>
           <ul class="footer__column footer__list">
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'Дизайн-проекты'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >Дизайн-проекты</NavLink
+              >
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Интерьеры'" />
+              <NavLink to="#" class="link footer__link">Интерьеры</NavLink>
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Экстерьеры'" />
+              <NavLink to="#" class="link footer__link">Экстерьеры</NavLink>
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'Торговые помещения'" />
+              <NavLink to="#" class="link footer__link"
+                >Торговые помещения</NavLink
+              >
             </li>
             <li class="footer__item">
-              <Link class="footer__link" :text="'3D-туры'" />
+              <NavLink to="#" class="link footer__link">3D-туры</NavLink>
             </li>
           </ul>
           <ul class="footer__column footer__list">
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'Верстка каталогов'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >Верстка каталогов</NavLink
+              >
             </li>
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'Онлайн-конструктор'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >Онлайн-конструктор</NavLink
+              >
             </li>
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'О компании'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >О компании</NavLink
+              >
             </li>
             <li class="footer__item footer__item_margin">
-              <Link
-                class="footer__link footer__link_highlighted"
-                :text="'Контакты'"
-              />
+              <NavLink to="#" class="link footer__link footer__link_highlighted"
+                >Контакты</NavLink
+              >
             </li>
           </ul>
           <address class="footer__address footer__column">
-            <Link class="footer__phone" :text="'+7 (965) 63-69-353'" :href="'tel:+79656369353'"/>
-            
-            <a href="mailto:3d4u@bk.ru" class="footer__email">3d4u@bk.ru</a>
+            <a class="footer__phone" href="'tel:+79656369353'"
+              >+7 (965) 63-69-353</a
+            >
+            <a class="footer__email" href="mailto:3d4u@bk.ru">3d4u@bk.ru</a>
             <p class="footer__office">
               <span class="footer__office-building"
                 >г. Пенза, ул. Дружбы, 6 (Технопарк "Яблочков"), оф. 415</span
               >
-              <span class="footer__office-worktime"
-                >пн-пт с 9:00 до 17:00</span
-              >
+              <span class="footer__office-worktime">пн-пт с 9:00 до 17:00</span>
             </p>
           </address>
         </nav>
@@ -174,29 +173,31 @@
             <span class="footer__link">© 2024 3D4U. Все права защищены</span>
           </li>
           <li class="footer__copyright">
-            <Link class="footer__link" :text="'Пользовательское соглашение'" />
+            <NavLink to="#" class="link footer__link">Пользовательское соглашение</NavLink>
           </li>
           <li class="footer__copyright">
-            <Link class="footer__link" :text="'Политика конфиденциальности'" />
+            <NavLink to="#" class="link footer__link">Политика конфиденциальности</NavLink>
           </li>
         </ul>
         <div class="footer__created-by">
-          <a href="#" class="footer__company-link"><img class="footer__company-logo"
-            src="../../../shared/assets/img/icons/INKOM_logo.svg"
-            alt="INKOM logo"
+          <a href="#" class="footer__company-link"
+            ><img
+              class="footer__company-logo"
+              src="../../../shared/assets/img/icons/INKOM_logo.svg"
+              alt="INKOM logo"
           /></a>
-          <a href="#" class="footer__company-link"><img class="footer__company-logo"
-            src="../../../shared/assets/img/icons/match_logo.svg"
-            alt="MATCH logo"
+          <a href="#" class="footer__company-link"
+            ><img
+              class="footer__company-logo"
+              src="../../../shared/assets/img/icons/match_logo.svg"
+              alt="MATCH logo"
           /></a>
         </div>
       </div>
     </div>
   </footer>
 </template>
-<script setup>
-import Link from '@/shared/UI/Link';
-</script>
+<script setup></script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
 
@@ -226,7 +227,9 @@ import Link from '@/shared/UI/Link';
 
   &__info {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 0 32px;
+    gap: 24px;
   }
 
   &__column {
@@ -273,21 +276,24 @@ import Link from '@/shared/UI/Link';
     font-style: normal;
   }
 
+  &__phone,
+  &__email {
+    color: $gray5;
+    display: inline-block;
+    margin: 0 0 12px;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
   &__phone {
     @extend %s2;
-    color: $gray5;
-    margin: 0 0 12px;
-    border-bottom: none;
-
-    :hover, :active {
-      border-bottom: none;
-    }
+    text-decoration: none;
   }
 
   &__email {
     @extend %p4;
-    color: $gray5;
-    margin: 0 0 12px;
   }
 
   &__office {
@@ -309,6 +315,7 @@ import Link from '@/shared/UI/Link';
     border-top: 1px solid $gray50;
     padding: 32px 0 0 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -331,6 +338,28 @@ import Link from '@/shared/UI/Link';
 
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+
+    &__container {
+      padding: 40px 16px;
+    }
+
+    &__info {
+      margin: 0;
+    }
+
+    &__terms {
+      padding: 24px 0 0 0;
+    }
+
+    &__terms, &__policies, &__created-by {
+      flex-direction: column;
+      gap: 12px;
     }
   }
 }

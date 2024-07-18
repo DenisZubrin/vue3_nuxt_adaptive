@@ -1,9 +1,8 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <Burger class="header__burger"/>
-      <!-- Вынести в shared -->
-      <a href="/" class="logo header__logo">
+      <Burger class="header__burger" />
+      <NuxtLink to="/" class="logo header__logo">
         <figure class="logo__container">
           <svg
             class="logo__icon"
@@ -47,16 +46,14 @@
             Cтудия <br />3D-визуализации <br />3D FOR YOU
           </figcaption>
         </figure>
-      </a>
-      <!--  -->
+      </NuxtLink>
       <nav class="nav header__nav">
         <ul class="nav__list">
           <li class="nav__item">
             <div class="select">
-              <Link
-                class="select__link nav__link"
-                :text="'Визуализация мебели'"
-              />
+              <NuxtLink to="#" class="link select__link nav__link"
+                >Визуализация мебели</NuxtLink
+              >
               <svg
                 class="select__icon"
                 viewBox="0 0 16 16"
@@ -68,26 +65,26 @@
               </svg>
               <ul class="select__list">
                 <li class="select__item">
-                  <Link
-                    class="select__link"
-                    :text="'Подбор комплектующих мебели'"
-                  />
+                  <NuxtLink to="#" class="link select__link"
+                    >Подбор комплектующих мебели</NuxtLink
+                  >
                 </li>
                 <li class="select__item">
-                  <Link
-                    class="select__link"
-                    :text="'Подбор комплектующих мебели'"
-                  />
+                  <NuxtLink to="#" class="link select__link"
+                    >Подбор комплектующих мебели</NuxtLink
+                  >
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav__item">
-            <Link class="nav__link" :text="'Верстка каталогов'" />
+            <NuxtLink to="#" class="link nav__link">Верстка каталогов</NuxtLink>
           </li>
           <li class="nav__item">
             <div class="select">
-              <Link class="select__link nav__link" :text="'Дизайн проектов'" />
+              <NuxtLink to="#" class="link select__link nav__link"
+                >Дизайн проектов</NuxtLink
+              >
               <svg
                 class="select__icon"
                 viewBox="0 0 16 16"
@@ -99,33 +96,49 @@
               </svg>
               <ul class="select__list">
                 <li class="select__item">
-                  <Link class="select__link" :text="'Проекты под заказ'" />
+                  <NuxtLink to="#" class="link select__link"
+                    >Проекты под заказ</NuxtLink
+                  >
                 </li>
                 <li class="select__item">
-                  <Link class="select__link" :text="'Готовые проекты'" />
+                  <NuxtLink to="#" class="link select__link"
+                    >Готовые проекты</NuxtLink
+                  >
                 </li>
               </ul>
             </div>
           </li>
           <li class="nav__item">
-            <Link class="nav__link" :text="'3D-тур'" />
+            <NuxtLink to="#" class="link nav__link">3D-тур</NuxtLink>
           </li>
           <li class="nav__item">
-            <Link class="nav__link" :text="'Онлайн-конструктор'" />
+            <NuxtLink to="#" class="link nav__link"
+              >Онлайн-конструктор</NuxtLink
+            >
           </li>
           <li class="nav__item">
-            <Link class="nav__link" :text="'О нас'" />
+            <NuxtLink to="#" class="link nav__link">О нас</NuxtLink>
           </li>
           <li class="nav__item">
-            <Link class="nav__link" :text="'Контакты'" />
+            <NuxtLink to="#" class="link nav__link">Контакты</NuxtLink>
           </li>
         </ul>
       </nav>
+      <NuxtLink to="#">
+        <svg
+          class="header__link-icon"
+          viewBox="0 0 22 22"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+          />
+        </svg>
+      </NuxtLink>
     </div>
   </header>
 </template>
 <script setup>
-import Link from '@/shared/UI/Link';
 import Burger from '@/widgets/Header/UI/Burger';
 </script>
 <style lang="scss">
@@ -135,7 +148,7 @@ import Burger from '@/widgets/Header/UI/Burger';
   position: fixed;
   width: 100%;
   z-index: 1;
-  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, .5) 50%);
+  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5) 50%);
 
   &__container {
     display: flex;
@@ -149,9 +162,15 @@ import Burger from '@/widgets/Header/UI/Burger';
   &__logo-caption {
     margin: 0 0 0 10px;
   }
+
+  &__link-icon {
+    display: none;
+    fill: $white;
+    width: 22px;
+    height: 22px;
+  }
 }
 
-// TODO вынести в shared
 .logo {
   text-decoration: none;
 
@@ -189,6 +208,7 @@ import Burger from '@/widgets/Header/UI/Burger';
   position: relative;
   display: flex;
   align-items: center;
+  padding: 10px 0;
 
   &__link:hover ~ &__icon {
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -214,14 +234,17 @@ import Burger from '@/widgets/Header/UI/Burger';
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 28px;
+    top: 38px;
     left: -12px;
     list-style-type: none;
     border-radius: 8px;
     background-color: $gray80;
     min-width: 252px;
     padding: 0;
-    transition-delay: 0.3s; // костыль. Чтобы пользователь успел навестить на меню
+
+    &:focus-visible {
+      opacity: 1;
+    }
   }
 
   &__item {
@@ -241,6 +264,16 @@ import Burger from '@/widgets/Header/UI/Burger';
   }
   &__link {
     color: $white;
+  }
+
+  &__item > &__link {
+    &:hover {
+      color: $white;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 }
 
@@ -263,6 +296,32 @@ import Burger from '@/widgets/Header/UI/Burger';
 
   &__link {
     color: $white;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+
+    &__container {
+      padding-top: 12px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+    &__logo {
+      &-caption {
+        display: none;
+      }
+    }
+
+    &__link-icon {
+      display: block;
+    }
   }
 }
 </style>
