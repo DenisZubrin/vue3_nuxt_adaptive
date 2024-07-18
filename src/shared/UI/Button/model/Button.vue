@@ -1,7 +1,7 @@
 <template>
   <button class="button">
     <span class="button__text">{{ text }}</span>
-    <slot></slot>
+    <slot name="icon"></slot>
   </button>
 </template>
 <script setup>
@@ -19,7 +19,7 @@ defineProps({
   border-radius: 8px;
   min-height: 60px;
   box-sizing: border-box;
-  background-color: $white;
+  background-color: $gray5;
   display: flex;
   justify-content: center;
   align-items: center;

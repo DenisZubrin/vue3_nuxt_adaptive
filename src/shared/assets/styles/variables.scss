@@ -1,5 +1,9 @@
 //colors
 
+:root {
+  --f-h1: 48px;
+}
+
 //base palette
 $white: #fff;
 $gray5: #eee;
@@ -9,6 +13,7 @@ $gray80: #292929;
 $gray90: #1f1f1f;
 $black: #191919;
 $green: #909f45;
+
 
 //statuses
 $success: #98bf44;
@@ -26,9 +31,12 @@ $gradient_opacity_1: rgba(15, 15, 14, 1);
   line-height: $height;
   text-transform: $case;
 }
+
+
+
 //headings
 %h1 {
-  @include font(48px, 1.2, 600, uppercase);
+  @include font(var(--f-h1), 1.2, 600, uppercase);
 }
 %h2 {
   @include font(36px, 1.2, 600, uppercase);
@@ -75,7 +83,7 @@ $gradient_opacity_1: rgba(15, 15, 14, 1);
   @include font(16px, 1.45, 400);
 }
 %p4 {
-  @include font(14px, 1.45, 400);
+  @include font(14px, 1.4, 400);
 }
 %p5 {
   @include font(12px, 1.2, 400);
@@ -97,4 +105,12 @@ $gradient_opacity_1: rgba(15, 15, 14, 1);
 }
 %banner_link {
   @include font(18px, 1.35, 500);
+}
+
+@media screen and (max-width: 1024px) {
+  // $f-h1: 32px !global;
+  :root {
+    --f-h1: 32px;
+  }
+  
 }

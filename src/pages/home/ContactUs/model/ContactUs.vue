@@ -51,7 +51,9 @@
           type="submit"
           @submit.prevent
           :text="'Отправить'"
-        />
+        >
+          <template #icon> </template>
+        </Button>
       </form>
       <a class="contact-us__link-to-top" href="#top">
         <svg

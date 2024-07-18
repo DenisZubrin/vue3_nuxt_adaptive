@@ -7,217 +7,223 @@
         реалистичную и атмосферную картину
       </p>
       <div class="showcase__articles">
-        <NuxtLink to="#" class="article-card">
-          <article
-            class="article-card__container article-card__container_big showcase__article"
-          >
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_1.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Флагманский фирменный салон компании MGS в городе Самара
-              </h4>
-              <div class="article-card__inner">
-                <p class="article-card__description">
-                  Уникальное пространство, где дизайн и функциональность
-                  сочетаются для создания уютной и стильной атмосферы.
-                </p>
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+        <div class="showcase__row">
+          <NuxtLink to="#" class="article-card">
+            <article
+              class="article-card__container article-card__container_big showcase__article"
+            >
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_1.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Флагманский фирменный салон компании MGS в городе Самара
+                </h4>
+                <div class="article-card__inner">
+                  <p class="article-card__description">
+                    Уникальное пространство, где дизайн и функциональность
+                    сочетаются для создания уютной и стильной атмосферы.
+                  </p>
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article
-            class="article-card__container article-card__container_big showcase__article"
-          >
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_2.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">Пространство света</h4>
-              <div class="article-card__inner">
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+          <NuxtLink to="#" class="article-card">
+            <article
+              class="article-card__container article-card__container_big showcase__article"
+            >
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_2.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">Пространство света</h4>
+                <div class="article-card__inner">
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article class="article-card__container showcase__article">
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Эко-стайл лайф: Жизнь в зеленом тандеме
-              </h4>
-              <div class="article-card__inner">
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+        </div>
+        <div class="showcase__row">
+          <NuxtLink to="#" class="article-card">
+            <article class="article-card__container showcase__article">
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Эко-стайл лайф: Жизнь в зеленом тандеме
+                </h4>
+                <div class="article-card__inner">
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article class="article-card__container showcase__article">
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_4.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Мягкость махагонового пламени
-              </h4>
-              <div class="article-card__inner">
-                <p class="article-card__description">
-                  Цвет дивана словно ласковый покров, обвивающий каждый контур,
-                  делает его местом не только для сидения, но и для
-                  мечтательного погружения в мир гармонии.
-                </p>
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+          <NuxtLink to="#" class="article-card">
+            <article class="article-card__container showcase__article">
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_4.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Мягкость махагонового пламени
+                </h4>
+                <div class="article-card__inner">
+                  <p class="article-card__description">
+                    Цвет дивана словно ласковый покров, обвивающий каждый
+                    контур, делает его местом не только для сидения, но и для
+                    мечтательного погружения в мир гармонии.
+                  </p>
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article class="article-card__container showcase__article">
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_5.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Концепции проекта торгового центра "Московский" в г. Кузнецк
-              </h4>
-              <div class="article-card__inner">
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+          <NuxtLink to="#" class="article-card">
+            <article class="article-card__container showcase__article">
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_5.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Концепции проекта торгового центра "Московский" в г. Кузнецк
+                </h4>
+                <div class="article-card__inner">
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article
-            class="article-card__container article-card__container_big showcase__article"
-          >
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_6.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Мир уюта и изысканности с нашим эксклюзивным каталогом диванов
-              </h4>
-              <div class="article-card__inner">
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+        </div>
+        <div class="showcase__row">
+          <NuxtLink to="#" class="article-card">
+            <article
+              class="article-card__container article-card__container_big showcase__article"
+            >
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_6.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Мир уюта и изысканности с нашим эксклюзивным каталогом диванов
+                </h4>
+                <div class="article-card__inner">
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
-        <NuxtLink to="#" class="article-card">
-          <article
-            class="article-card__container article-card__container_big showcase__article"
-          >
-            <img
-              src="@/shared/assets/img/backgrounds/showcase_article_bg_7.png"
-              alt="bg"
-              class="article-card__bg"
-            />
-            <div class="article-card__text">
-              <h4 class="article-card__heading">
-                Флагманский фирменный салон компании MGS в городе Самара
-              </h4>
-              <div class="article-card__inner">
-                <span href="#" class="article-card__external">
-                  Подробнее
-                  <svg
-                    class="article-card__external-icon"
-                    viewBox="0 0 22 22"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                    />
-                  </svg>
-                </span>
+            </article>
+          </NuxtLink>
+          <NuxtLink to="#" class="article-card">
+            <article
+              class="article-card__container article-card__container_big showcase__article"
+            >
+              <img
+                src="@/shared/assets/img/backgrounds/showcase_article_bg_7.png"
+                alt="bg"
+                class="article-card__bg"
+              />
+              <div class="article-card__text">
+                <h4 class="article-card__heading">
+                  Флагманский фирменный салон компании MGS в городе Самара
+                </h4>
+                <div class="article-card__inner">
+                  <span href="#" class="article-card__external">
+                    Подробнее
+                    <svg
+                      class="article-card__external-icon"
+                      viewBox="0 0 22 22"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
-            </div>
-          </article>
-        </NuxtLink>
+            </article>
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </section>
@@ -251,8 +257,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    justify-content: space-between;
   }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+  }
+
 }
 
 .article-card {
@@ -265,7 +278,8 @@
   }
 
   &__container {
-    width: 437px;
+    max-width: 437px;
+    width: 100%;
     min-height: 370px;
     display: flex;
     flex-direction: column;
@@ -275,7 +289,7 @@
     position: relative;
 
     &_big {
-      width: 668px;
+      max-width: 668px;
       min-height: 560px;
       flex-direction: row;
       justify-content: space-between;
@@ -340,7 +354,8 @@
   }
 }
 
-/*@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1439px) {
+  /*
   .showcase {
     &__articles {
       flex-direction: column;
@@ -350,8 +365,8 @@
 
   .article-card__container {
     min-width: 668px;
-  }
-}*/
+  }*/
+}
 
 @media screen and (max-width: 360px) {
   .showcase {
