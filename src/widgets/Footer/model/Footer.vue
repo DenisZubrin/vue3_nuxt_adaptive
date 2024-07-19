@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__info">
-        <div class="footer__column">
+        <div class="footer__column footer__about-us">
           <NavLink to="/" class="logo footer__logo">
             <figure class="logo__container footer__logo-container">
               <svg
@@ -153,7 +153,7 @@
               >
             </li>
           </ul>
-          <address class="footer__address footer__column">
+          <address class="footer__address footer__column footer__list">
             <a class="footer__phone" href="'tel:+79656369353'"
               >+7 (965) 63-69-353</a
             >
@@ -173,10 +173,14 @@
             <span class="footer__link">© 2024 3D4U. Все права защищены</span>
           </li>
           <li class="footer__copyright">
-            <NavLink to="#" class="link footer__link">Пользовательское соглашение</NavLink>
+            <NavLink to="#" class="link footer__link"
+              >Пользовательское соглашение</NavLink
+            >
           </li>
           <li class="footer__copyright">
-            <NavLink to="#" class="link footer__link">Политика конфиденциальности</NavLink>
+            <NavLink to="#" class="link footer__link"
+              >Политика конфиденциальности</NavLink
+            >
           </li>
         </ul>
         <div class="footer__created-by">
@@ -227,7 +231,6 @@
 
   &__info {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 0 32px;
     gap: 24px;
   }
@@ -342,24 +345,98 @@
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1090px) {
   .footer {
+    &__policies {
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 0 24px;
+    }
 
+    &__created-by {
+      width: 100%;
+      justify-content: end;
+    }
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .footer {
+    &__about-us {
+      max-width: 180px;
+    }
+
+    &__column {
+      max-width: 200px;
+    }
+    &__list {
+      max-width: calc(50% - 12px);
+    }
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .footer {
     &__container {
-      padding: 40px 16px;
+      padding: 60px 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .footer {
+    &__sitemap {
+      flex-direction: column;
+    }
+
+    &__list {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer {
+    &__container {
+      padding: 40px 32px;
+    }
+
+    &__column {
+      min-height: 0;
     }
 
     &__info {
-      margin: 0;
+      flex-direction: column;
+    }
+    &__about-us {
+      max-width: 100%;
+    }
+
+    &__logo-container {
+      flex-direction: row;
+    }
+
+    &__logo-caption {
+      margin: 0 0 0 14px;
     }
 
     &__terms {
       padding: 24px 0 0 0;
     }
 
-    &__terms, &__policies, &__created-by {
+    &__terms,
+    &__policies,
+    &__created-by {
       flex-direction: column;
       gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    &__container {
+      padding: 40px 16px;
     }
   }
 }

@@ -28,7 +28,6 @@
   </section>
 </template>
 <script setup>
-
 defineProps({
   links: {
     type: Array,
@@ -135,21 +134,16 @@ defineProps({
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   .slide {
-
     &__container {
       flex-direction: column;
       justify-content: end;
-      align-items: start;
+      align-items: center;
     }
 
     &__text {
       max-width: 100%;
-    }
-
-    &__heading {
-      font-size: 32px;
     }
 
     &__description {

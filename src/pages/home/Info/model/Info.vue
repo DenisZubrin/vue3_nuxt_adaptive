@@ -153,6 +153,8 @@ import Button from '@/shared/UI/Button';
   .info {
     &__container {
       justify-content: center;
+      padding-top: 60px;
+      padding-bottom: 56px;
     }
 
     &__card {
@@ -165,8 +167,6 @@ import Button from '@/shared/UI/Button';
   .info {
     &__container {
       flex-direction: column;
-      padding-top: 60px;
-      padding-bottom: 56px;
     }
 
     &__card {

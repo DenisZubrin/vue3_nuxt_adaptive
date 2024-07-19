@@ -55,7 +55,7 @@
           <template #icon> </template>
         </Button>
       </form>
-      <a class="contact-us__link-to-top" href="#top">
+      <a class="contact-us__link-to-top" href="#main-screen">
         <svg
           class="contact-us__arrow-icon"
           viewBox="0 0 32 32"
@@ -138,12 +138,12 @@ import Button from '@/shared/UI/Button';
   display: flex;
   align-items: start;
   justify-content: space-between;
+  gap: 24px;
   z-index: 1;
 
   &__text {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     gap: 24px;
   }
 
@@ -229,32 +229,64 @@ import Button from '@/shared/UI/Button';
     border: none;
     cursor: pointer;
     padding: 20px 118px;
+    max-width: 322px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .form {
+    flex-direction: column;
+  
+    &__text {
+      width: 100%;
+    }
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1093px) {
+  .form {
+
+    &__text {
+      justify-content: space-between;
+    }
+    
+    &__field {
+      max-width: calc(50% - 24px);
+
+      &:nth-child(3) {
+        max-width: 100%;
+      }
+    } 
+  }
+}
+@media screen and (max-width: 768px) {
   .contact-us {
     &__container {
       padding: 60px 32px;
     }
-
-    &__heading {
-      font-size: 32px;
-    }
-
     &__link-to-top {
       right: 16px;
     }
   }
+}
 
+@media screen and (max-width: 540px) {
+  .form {
+    &__button {
+      max-width: 100%;
+    }
+    &__field {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
   .form {
     flex-direction: column;
 
     &__text {
       margin: 0 0 24px;
-    }
-    &__button {
-      width: 100%;
     }
   }
 }

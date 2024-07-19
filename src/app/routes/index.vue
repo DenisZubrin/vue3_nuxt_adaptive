@@ -1,7 +1,6 @@
 <template>
-  <section class="main-screen">
+  <section class="main-screen" name="main-screen">
     <swiper
-      name="top"
       :direction="'vertical'"
       :slides-per-view="1"
       :pagination="{ clickable: true }"

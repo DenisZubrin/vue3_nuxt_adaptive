@@ -147,7 +147,7 @@ import Burger from '@/widgets/Header/UI/Burger';
 .header {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5) 50%);
 
   &__container {
@@ -298,10 +298,8 @@ import Burger from '@/widgets/Header/UI/Burger';
     color: $white;
   }
 }
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 1136px) {
   .header {
-
     &__container {
       padding-top: 12px;
     }
@@ -318,6 +316,12 @@ import Burger from '@/widgets/Header/UI/Burger';
         display: none;
       }
     }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+  
 
     &__link-icon {
       display: block;

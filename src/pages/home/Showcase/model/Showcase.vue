@@ -8,9 +8,9 @@
       </p>
       <div class="showcase__articles">
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card">
+          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
             <article
-              class="article-card__container article-card__container_big showcase__article"
+              class="article-card__container article-card__container_big"
             >
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_1.png"
@@ -42,9 +42,9 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card">
+          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
             <article
-              class="article-card__container article-card__container_big showcase__article"
+              class="article-card__container article-card__container_big"
             >
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_2.png"
@@ -72,8 +72,8 @@
           </NuxtLink>
         </div>
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card">
-            <article class="article-card__container showcase__article">
+          <NuxtLink to="#" class="article-card showcase__article ">
+            <article class="article-card__container">
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
                 alt="bg"
@@ -100,8 +100,8 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card">
-            <article class="article-card__container showcase__article">
+          <NuxtLink to="#" class="article-card showcase__article">
+            <article class="article-card__container">
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_4.png"
                 alt="bg"
@@ -133,8 +133,8 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card">
-            <article class="article-card__container showcase__article">
+          <NuxtLink to="#" class="article-card showcase__article">
+            <article class="article-card__container">
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_5.png"
                 alt="bg"
@@ -163,9 +163,9 @@
           </NuxtLink>
         </div>
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card">
+          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
             <article
-              class="article-card__container article-card__container_big showcase__article"
+              class="article-card__container article-card__container_big"
             >
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_6.png"
@@ -193,9 +193,9 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card">
+          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
             <article
-              class="article-card__container article-card__container_big showcase__article"
+              class="article-card__container article-card__container_big"
             >
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_7.png"
@@ -262,20 +262,24 @@
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 24px;
     width: 100%;
   }
 
+  &__article {
+    width: calc(33% - 12px);
+
+    &_big {
+      width: calc(50% - 12px);
+    }
+  }
 }
 
 .article-card {
   text-decoration: none;
   overflow: hidden;
   border-radius: 8px;
-
-  &:hover &__text {
-    transform: translateY(0);
-  }
 
   &__container {
     max-width: 437px;
@@ -321,6 +325,10 @@
     color: $white;
   }
 
+  &:hover &__text {
+    transform: translateY(0);
+  }
+
   &__text {
     z-index: 1;
     transition: 0.3s;
@@ -355,25 +363,73 @@
 }
 
 @media screen and (max-width: 1439px) {
-  /*
   .showcase {
-    &__articles {
-      flex-direction: column;
-      align-items: center;
+    &__row {
+      justify-content: center;
+    }
+
+    &__row:nth-child(2) &__article:last-child {
+      width: 100%;
+    }
+
+    &__article {
+      width: calc(50% - 12px);
     }
   }
 
-  .article-card__container {
-    min-width: 668px;
-  }*/
+  .article-card {
+    &__container,
+    &__container_big {
+      max-width: 100%;
+      min-height: 560px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .article-card {
+    &__container {
+      min-height: 470px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .article-card {
+    &__container{
+      min-height: 370px;
+    }
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .showcase {
+    &__article {
+      width: 100%;
+    }
+
+    &__container {
+      padding-bottom: 56px;
+    }
+  }
+
+  .article-card {
+    &__container {
+      min-height: 560px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .article-card {
+    &__container{
+      min-height: 370px;
+    }
+  }
 }
 
 @media screen and (max-width: 360px) {
   .showcase {
-    &__heading {
-      font-size: 32px;
-    }
-
     &__description {
       @extend %p3;
     }
