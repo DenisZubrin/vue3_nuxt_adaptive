@@ -8,7 +8,10 @@
       </p>
       <div class="showcase__articles">
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
+          <NuxtLink
+            to="#"
+            class="article-card showcase__article showcase__article_big"
+          >
             <article
               class="article-card__container article-card__container_big"
             >
@@ -42,7 +45,10 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
+          <NuxtLink
+            to="#"
+            class="article-card showcase__article showcase__article_big"
+          >
             <article
               class="article-card__container article-card__container_big"
             >
@@ -72,7 +78,7 @@
           </NuxtLink>
         </div>
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card showcase__article ">
+          <NuxtLink to="#" class="article-card showcase__article">
             <article class="article-card__container">
               <img
                 src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
@@ -163,7 +169,10 @@
           </NuxtLink>
         </div>
         <div class="showcase__row">
-          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
+          <NuxtLink
+            to="#"
+            class="article-card showcase__article showcase__article_big"
+          >
             <article
               class="article-card__container article-card__container_big"
             >
@@ -193,7 +202,10 @@
               </div>
             </article>
           </NuxtLink>
-          <NuxtLink to="#" class="article-card showcase__article showcase__article_big">
+          <NuxtLink
+            to="#"
+            class="article-card showcase__article showcase__article_big"
+          >
             <article
               class="article-card__container article-card__container_big"
             >
@@ -322,17 +334,33 @@
   &__text,
   &__external {
     z-index: 1;
-    color: $white;
-  }
-
-  &:hover &__text {
-    transform: translateY(0);
+    color: $gray5;
   }
 
   &__text {
-    z-index: 1;
-    transition: 0.3s;
-    transform: translateY(65px);
+    width: calc(100% - 44px);
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    // top: -24px;
+    // bottom: -50px;
+    transition: all 0.3s;
+    // transform: translateY(calc(100% - 20px - 24px)); // 20px заменить на переменную высоты заголовка
+    transform: translateY(124px);
+  }
+
+  &__container_big &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &:hover &__text {
+    transform: translateY(0px);
+    // bottom: 50px;
+  }
+
+  &__inner {
+    height: 100px;
   }
 
   &__heading {
@@ -340,14 +368,9 @@
     margin: 0 0 24px;
   }
 
-  &__inner {
-    display: flex;
-    align-items: end;
-  }
-
   &__description {
     @extend %p4;
-    margin: 0;
+    margin: 0 0 24px;
     color: $gray5;
   }
 
@@ -383,6 +406,20 @@
       max-width: 100%;
       min-height: 560px;
     }
+
+    &__container &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+    &__text {
+      width: 100%;
+    }
+
+    &__description {
+      margin: 0;
+    }
   }
 }
 
@@ -396,7 +433,7 @@
 
 @media screen and (max-width: 768px) {
   .article-card {
-    &__container{
+    &__container {
       min-height: 370px;
     }
   }
@@ -422,7 +459,7 @@
 
 @media screen and (max-width: 540px) {
   .article-card {
-    &__container{
+    &__container {
       min-height: 370px;
     }
   }

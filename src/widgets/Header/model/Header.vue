@@ -1,7 +1,11 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <Burger class="header__burger" />
+      <div class="burger header__burger" @click="showMenu">
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+        <div class="burger__line"></div>
+      </div>
       <NuxtLink to="/" class="logo header__logo">
         <figure class="logo__container">
           <svg
@@ -124,7 +128,7 @@
           </li>
         </ul>
       </nav>
-      <NuxtLink to="#">
+      <NuxtLink to="#" class="header__external-link">
         <svg
           class="header__link-icon"
           viewBox="0 0 22 22"
@@ -139,7 +143,6 @@
   </header>
 </template>
 <script setup>
-import Burger from '@/widgets/Header/UI/Burger';
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -155,16 +158,16 @@ import Burger from '@/widgets/Header/UI/Burger';
     justify-content: space-between;
     align-items: center;
   }
-  &__burger {
-    display: none;
-  }
 
   &__logo-caption {
     margin: 0 0 0 10px;
   }
 
-  &__link-icon {
+  &__external-link {
     display: none;
+  }
+
+  &__link-icon {
     fill: $white;
     width: 22px;
     height: 22px;
@@ -311,19 +314,14 @@ import Burger from '@/widgets/Header/UI/Burger';
     &__burger {
       display: block;
     }
+
     &__logo {
       &-caption {
         display: none;
       }
     }
-  }
-}
 
-@media screen and (max-width: 360px) {
-  .header {
-  
-
-    &__link-icon {
+    &__external-link {
       display: block;
     }
   }

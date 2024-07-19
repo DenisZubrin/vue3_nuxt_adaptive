@@ -2,7 +2,7 @@
   <section class="info">
     <div class="info__container container">
       <div class="info__card info__about-us">
-        <h3 class="info__heading">Мы – студия 3D-визуализации 3D4U</h3>
+        <h3 class="info__heading">Мы – студия <br />3D-визуализации 3D4U</h3>
         <p class="info__description">
           Наш основной принцип – индивидуальный подход к каждому клиенту.
           Огромный опыт работы позволяет нам воплощать проекты любой сложности –
@@ -169,9 +169,12 @@ import Button from '@/shared/UI/Button';
       flex-direction: column;
     }
 
+    &__heading {
+      font-size: 24px;
+    }
+
     &__card {
       max-width: 100%;
-      align-items: center;
       min-height: 0;
     }
 
@@ -199,7 +202,6 @@ import Button from '@/shared/UI/Button';
     &__button {
       width: 100%;
     }
-    
   }
 }
 /*@media screen and (max-width: 360px) {
