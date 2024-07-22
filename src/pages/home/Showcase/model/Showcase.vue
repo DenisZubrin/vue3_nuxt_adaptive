@@ -328,7 +328,7 @@
     transition: transform 0.3s ease-out;
     transform: scale(1.1);
     filter: brightness(70%);
-    //background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
+    // background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
   }
 
   &__text,

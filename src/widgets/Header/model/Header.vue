@@ -181,7 +181,7 @@
         >
           <template #icon
             ><svg
-              class="button__icon button__icon_light"
+              class="button__icon button__icon_light header__button-icon"
               viewBox="0 0 22 22"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -333,6 +333,18 @@ const toggleMenu = () => {
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1136px) {
   .header {
     &__container {
@@ -342,7 +354,7 @@ const toggleMenu = () => {
 
     &__nav {
       display: none;
-
+      
       &_mobile {
         position: fixed;
         top: 0;
@@ -355,6 +367,7 @@ const toggleMenu = () => {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        animation: appear 0.5s;
       }
     }
 
@@ -460,8 +473,11 @@ const toggleMenu = () => {
       border: none;
       padding: 0;
 
-      &__icon {
+      &-icon {
         right: 0;
+        top: -16px;
+        width: 32px;
+        height: 32px;
       }
     }
 
