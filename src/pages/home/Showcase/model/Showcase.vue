@@ -245,7 +245,6 @@
 @import '@/shared/assets/styles/variables.scss';
 
 .showcase {
-  background-color: $black;
 
   &__container {
     padding-bottom: 100px;
@@ -254,13 +253,13 @@
   &__heading {
     margin: 0 auto 24px;
     @extend %h1;
-    color: $white;
+    color: var(--text);
     text-align: center;
   }
 
   &__description {
     @extend %p3;
-    color: $white;
+    color: var(--text);
     margin: 0 auto 38px;
     text-align: center;
   }
@@ -334,7 +333,7 @@
   &__text,
   &__external {
     z-index: 1;
-    color: $gray5;
+    color: var(--text);
   }
 
   &__text {
@@ -371,7 +370,7 @@
   &__description {
     @extend %p4;
     margin: 0 0 24px;
-    color: $gray5;
+    color: var(--text);
   }
 
   &__external {
@@ -380,7 +379,7 @@
     &-icon {
       width: 22px;
       height: 22px;
-      fill: $white;
+      fill: var(--text);
     }
   }
 }

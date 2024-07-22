@@ -108,13 +108,13 @@ import Button from '@/shared/UI/Button';
   &__heading {
     margin: 0 0 24px;
     @extend %h1;
-    color: $gray5;
+    color: var(--text);
   }
 
   &__description {
     margin: 0 0 48px;
     @extend %p4;
-    color: $gray5;
+    color: var(--text);
   }
 
   &__link-to-top {
@@ -126,10 +126,10 @@ import Button from '@/shared/UI/Button';
   &__arrow-icon {
     width: 32px;
     height: 32px;
-    fill: $gray5;
+    fill: var(--text);
 
     &:hover {
-      fill: $green;
+      fill: var(secondary);
     }
   }
 }
@@ -155,7 +155,7 @@ import Button from '@/shared/UI/Button';
 
   &__label {
     @extend %p5;
-    color: $gray30;
+    color: var(--text-elements);
     position: absolute;
     top: 20px;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -166,49 +166,48 @@ import Button from '@/shared/UI/Button';
     background: inherit;
     outline: none;
     @extend %s4;
-    color: $gray5;
+    color: var(--text);
     border: none;
-    border-bottom: 1px solid $gray5;
+    border-bottom: 1px solid var(--text);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 20px 0;
     box-sizing: border-box;
 
     &::placeholder {
       @extend %p5;
-      color: $gray30;
+      color: var(--text-elements);
     }
   }
 
   &__input:focus {
-    border-bottom: 1px solid $green;
+    border-bottom: 1px solid var(--secondary);
   }
 
   &__field:focus-within &__label {
     top: 0;
-    color: $green;
+    color: var(--secondary);
   }
 
   &__agreement {
     width: 100%;
 
     &-label {
-      display: inline-block;
-      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: start;
       @extend %p5;
-      color: $gray30;
-      padding: 0 0 0 32px;
-      position: relative;
+      color: var(--text-elements);
 
       &::before {
         content: '';
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: block;
+        margin: 0 32px 0 0;
         width: 18px;
         height: 18px;
-        border: 1px solid $white;
+        border: 1px solid var(--text);
         border-radius: 2px;
+        box-sizing: border-box;
         transition-duration: 0.3s;
         cursor: pointer;
       }
@@ -221,8 +220,8 @@ import Button from '@/shared/UI/Button';
 
   &__checkbox:checked + &__agreement-label::before {
     background-image: url('@/shared/assets/img/icons/Check.svg');
-    background-color: $green;
-    border-color: $green;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
   }
 
   &__button {
@@ -236,7 +235,7 @@ import Button from '@/shared/UI/Button';
 @media screen and (max-width: 1439px) {
   .form {
     flex-direction: column;
-  
+
     &__text {
       width: 100%;
     }
@@ -245,18 +244,17 @@ import Button from '@/shared/UI/Button';
 
 @media screen and (max-width: 1093px) {
   .form {
-
     &__text {
       justify-content: space-between;
     }
-    
+
     &__field {
       max-width: calc(50% - 24px);
 
       &:nth-child(3) {
         max-width: 100%;
       }
-    } 
+    }
   }
 }
 @media screen and (max-width: 768px) {
@@ -264,6 +262,7 @@ import Button from '@/shared/UI/Button';
     &__container {
       padding: 60px 32px;
     }
+
     &__link-to-top {
       right: 16px;
     }
@@ -275,8 +274,23 @@ import Button from '@/shared/UI/Button';
     &__button {
       max-width: 100%;
     }
+
     &__field {
       max-width: 100%;
+    }
+
+    &__text {
+      margin: 0;
+    }
+
+    &__agreement-label {
+      display: inline-block;
+      width: 100%;
+
+      &::before {
+        float: left;
+        margin: 0 12px 0 0;
+      }
     }
   }
 }
@@ -285,8 +299,12 @@ import Button from '@/shared/UI/Button';
   .form {
     flex-direction: column;
 
-    &__text {
-      margin: 0 0 24px;
+    &__checkbox:checked + &__agreement-label::before {
+      background-image: url('@/shared/assets/img/icons/Check_alternative.svg');
+      background-position: -1px -1px;
+      background-color: var(--text);
+      color: transparent;
+      border-color: var(--text);
     }
   }
 }

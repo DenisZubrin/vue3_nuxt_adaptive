@@ -68,7 +68,6 @@ import Button from '@/shared/UI/Button';
 @import '@/shared/assets/styles/variables.scss';
 
 .info {
-  background-color: $black;
 
   &__container {
     display: flex;
@@ -93,18 +92,18 @@ import Button from '@/shared/UI/Button';
 
   &__heading {
     @extend %h3;
-    color: $gray5;
+    color: var(--text);
     margin: 0;
   }
 
   &__description {
     @extend %p3;
-    color: $gray5;
+    color: var(--text);
     margin: 0;
   }
 
   &__achievments {
-    background-color: $gray80;
+    background-color: var(--filler);
     padding: 44px 32px;
   }
 
@@ -114,12 +113,12 @@ import Button from '@/shared/UI/Button';
 
   &__text {
     @extend %p4;
-    color: $white;
+    color: var(--text);
   }
 
   &__number {
     @extend %num;
-    color: $white;
+    color: var(--text);
     display: block;
   }
 
@@ -192,7 +191,6 @@ import Button from '@/shared/UI/Button';
       font-size: 28px;
       display: block;
       width: 50%;
-      text-align: right;
     }
 
     &__text {
@@ -204,7 +202,5 @@ import Button from '@/shared/UI/Button';
     }
   }
 }
-/*@media screen and (max-width: 360px) {
 
-}*/
 </style>

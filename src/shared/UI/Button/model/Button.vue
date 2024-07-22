@@ -19,12 +19,12 @@ defineProps({
   border-radius: 8px;
   min-height: 60px;
   box-sizing: border-box;
-  background-color: $gray5;
+  background-color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 42px;
-  color: $gray80;
+  color: var(--filler);
   position: relative;
   cursor: pointer;
 
@@ -36,18 +36,18 @@ defineProps({
   &__icon {
     width: 22px;
     height: 22px;
-    fill: $gray80;
+    fill: var(--filler);
     position: absolute;
     right: 10px;
   }
 
   &:hover,
   &:active {
-    background-color: $green;
-    color: $white;
+    background-color: var(--secondary);
+    color: var(--text);
   }
   &:hover &__icon {
-    fill: $white;
+    fill: var(--text);
   }
 }
 </style>

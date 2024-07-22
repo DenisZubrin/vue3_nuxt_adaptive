@@ -78,13 +78,13 @@ defineProps({
 
   &__heading {
     @extend %h1;
-    color: $gray5;
+    color: var(--text);
     margin: 0 0 24px;
   }
 
   &__description {
     @extend %p3;
-    color: $gray5;
+    color: var(--text);
     margin: 0;
     width: 85%;
   }
@@ -104,32 +104,32 @@ defineProps({
     display: flex;
     justify-content: end;
     align-items: center;
-    border-top: 1px solid $gray30;
+    border-top: 1px solid var(--text-elements);
 
     &:last-child {
-      border-bottom: 1px solid $gray30;
+      border-bottom: 1px solid var(--text-elements);
     }
   }
 
   &__link {
     @extend %s3;
-    color: $white;
+    color: var(--text);
     text-decoration: none;
 
     &-icon {
       width: 22px;
       height: 22px;
-      fill: $white;
+      fill: var(--text);
     }
 
     &:hover {
-      color: $green;
+      color: var(--secondary);
       transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
   &__link:hover ~ &__link-icon {
-    fill: $green;
+    fill: var(--secondary);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

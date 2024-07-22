@@ -79,18 +79,6 @@ const slides = reactive([
   },
 ]);
 
-const onLastSlide = (swiper) => {
-  // window.scrollTo(0, 0);
-  // const lastSlide = swiper.slides[swiper.slides.length - 1];
-
-  if (swiper.isEnd) {
-    // swiper.mousewheel.disable();
-    // swiper.mousewheel.params.releaseOnEdges = true;
-    // document.documentElement.style.overflow = 'hidden';
-    // document.body.style.overflow = 'hidden';
-    // swiper.className.add('no_scroll');
-  }
-};
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';

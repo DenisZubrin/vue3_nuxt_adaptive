@@ -168,7 +168,7 @@
   }
 
   &__link-icon {
-    fill: $white;
+    fill: var(--text);
     width: 22px;
     height: 22px;
   }
@@ -189,21 +189,21 @@
     height: 46px;
 
     &-bg {
-      fill: $black;
+      fill: transparent;
     }
 
     &-letter {
-      fill: $white;
+      fill: var(--text);
     }
 
     &-caption-letter {
-      fill: $white;
+      fill: var(--text);
     }
   }
 
   &__caption {
     @extend %p5;
-    color: $white;
+    color: var(--text);
   }
 }
 
@@ -216,12 +216,12 @@
   &__link:hover ~ &__icon {
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: rotate(0deg);
-    fill: $green;
+    fill: var(--secondary);
   }
 
   &__icon {
     margin: 0 0 0 4px;
-    fill: $white;
+    fill: var(--text);
     width: 16px;
     height: 16px;
     transform: scale(1, -1);
@@ -241,7 +241,7 @@
     left: -12px;
     list-style-type: none;
     border-radius: 8px;
-    background-color: $gray80;
+    background-color: var(--filler);
     min-width: 252px;
     padding: 0;
 
@@ -255,7 +255,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $green;
+      background-color: var(--secondary);
     }
 
     &:first-child {
@@ -266,12 +266,12 @@
     }
   }
   &__link {
-    color: $white;
+    color: var(--text);
   }
 
   &__item > &__link {
     &:hover {
-      color: $white;
+      color: var(--text);
 
       &::before {
         display: none;
@@ -298,7 +298,7 @@
   }
 
   &__link {
-    color: $white;
+    color: var(--text);
   }
 }
 @media screen and (max-width: 1136px) {
