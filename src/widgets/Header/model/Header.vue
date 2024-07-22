@@ -1,7 +1,13 @@
 <template>
   <header class="header">
     <div class="container header__container">
-      <div class="burger header__burger" @click="showMenu">
+      <div
+        class="burger header__burger"
+        @click="toggleMenu"
+        :class="{
+          burger_open: state.menuActive,
+        }"
+      >
         <div class="burger__line"></div>
         <div class="burger__line"></div>
         <div class="burger__line"></div>
@@ -51,7 +57,12 @@
           </figcaption>
         </figure>
       </NuxtLink>
-      <nav class="nav header__nav">
+      <nav
+        class="nav header__nav"
+        :class="{
+          header__nav_mobile: state.menuActive,
+        }"
+      >
         <ul class="nav__list">
           <li class="nav__item">
             <div class="select">
@@ -70,13 +81,21 @@
               <ul class="select__list">
                 <li class="select__item">
                   <NuxtLink to="#" class="link select__link"
-                    >Подбор комплектующих мебели</NuxtLink
+                    >Мягкая мебель</NuxtLink
                   >
                 </li>
                 <li class="select__item">
                   <NuxtLink to="#" class="link select__link"
-                    >Подбор комплектующих мебели</NuxtLink
+                    >Корпусная мебель</NuxtLink
                   >
+                </li>
+                <li class="select__item">
+                  <NuxtLink to="#" class="link select__link"
+                    >Обеденные группы</NuxtLink
+                  >
+                </li>
+                <li class="select__item">
+                  <NuxtLink to="#" class="link select__link">Дверь</NuxtLink>
                 </li>
               </ul>
             </div>
@@ -87,7 +106,7 @@
           <li class="nav__item">
             <div class="select">
               <NuxtLink to="#" class="link select__link nav__link"
-                >Дизайн проектов</NuxtLink
+                >Дизайн-проекты</NuxtLink
               >
               <svg
                 class="select__icon"
@@ -101,12 +120,17 @@
               <ul class="select__list">
                 <li class="select__item">
                   <NuxtLink to="#" class="link select__link"
-                    >Проекты под заказ</NuxtLink
+                    >Мягкая мебель</NuxtLink
                   >
                 </li>
                 <li class="select__item">
                   <NuxtLink to="#" class="link select__link"
-                    >Готовые проекты</NuxtLink
+                    >Корпусная мебель</NuxtLink
+                  >
+                </li>
+                <li class="select__item">
+                  <NuxtLink to="#" class="link select__link"
+                    >Обеденные группы</NuxtLink
                   >
                 </li>
               </ul>
@@ -127,22 +151,61 @@
             <NuxtLink to="#" class="link nav__link">Контакты</NuxtLink>
           </li>
         </ul>
+        <NuxtLink to="#" class="nav__button">
+          <Button
+            class="button button_transparent"
+            type="submit"
+            @submit.prevent
+            :text="'Заказать проект'"
+          >
+            <template #icon
+              ><svg
+                class="button__icon button__icon_light"
+                viewBox="0 0 22 22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+                />
+              </svg>
+            </template>
+          </Button>
+        </NuxtLink>
       </nav>
-      <NuxtLink to="#" class="header__external-link">
-        <svg
-          class="header__link-icon"
-          viewBox="0 0 22 22"
-          xmlns="http://www.w3.org/2000/svg"
+      <NuxtLink to="#" class="header__button">
+        <Button
+          class="button button_transparent"
+          type="submit"
+          @submit.prevent
+          :text="'Заказать проект'"
         >
-          <path
-            d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-          />
-        </svg>
+          <template #icon
+            ><svg
+              class="button__icon button__icon_light"
+              viewBox="0 0 22 22"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+              />
+            </svg>
+          </template>
+        </Button>
       </NuxtLink>
     </div>
   </header>
 </template>
 <script setup>
+import Button from '@/shared/UI/Button';
+import { ref, reactive } from 'vue';
+
+const state = reactive({
+  menuActive: false,
+});
+
+const toggleMenu = () => {
+  state.menuActive = !state.menuActive;
+};
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -150,60 +213,24 @@
 .header {
   position: fixed;
   width: 100%;
+  
   z-index: 2;
   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5) 50%);
 
   &__container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    min-height: 78px;
   }
 
   &__logo-caption {
     margin: 0 0 0 10px;
   }
 
-  &__external-link {
+  &__button {
     display: none;
-  }
-
-  &__link-icon {
-    fill: var(--text);
-    width: 22px;
-    height: 22px;
-  }
-}
-
-.logo {
-  text-decoration: none;
-
-  &__container {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
-
-  &__icon {
-    display: block;
-    width: 46px;
-    height: 46px;
-
-    &-bg {
-      fill: transparent;
-    }
-
-    &-letter {
-      fill: var(--text);
-    }
-
-    &-caption-letter {
-      fill: var(--text);
-    }
-  }
-
-  &__caption {
-    @extend %p5;
-    color: var(--text);
   }
 }
 
@@ -254,7 +281,8 @@
     padding: 8px 12px;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:active {
       background-color: var(--secondary);
     }
 
@@ -270,7 +298,8 @@
   }
 
   &__item > &__link {
-    &:hover {
+    &:hover,
+    &:active {
       color: var(--text);
 
       &::before {
@@ -283,7 +312,6 @@
 .nav {
   display: flex;
   align-items: center;
-  min-height: 78px;
 
   &__list {
     display: flex;
@@ -300,7 +328,12 @@
   &__link {
     color: var(--text);
   }
+
+  &__button {
+    display: none;
+  }
 }
+
 @media screen and (max-width: 1136px) {
   .header {
     &__container {
@@ -309,20 +342,129 @@
 
     &__nav {
       display: none;
+
+      &_mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: var(--page-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     &__burger {
       display: block;
+      z-index: 3;
     }
 
     &__logo {
+      position: fixed;
+      left: calc(50% - 23px);
+
       &-caption {
         display: none;
       }
     }
 
-    &__external-link {
+    &__button {
       display: block;
+      text-decoration: none;
+    }
+
+    &__button .button {
+      padding: 8px 34px 8px 16px;
+      min-height: 0;
+    }
+  }
+
+  .nav {
+    &__list {
+      flex-direction: column;
+      width: 100%;
+      margin: 78px 0 0 0;
+    }
+
+    &__item {
+      border-top: 1px solid var(--text-elements);
+      width: 100%;
+      padding: 16px;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid var(--text-elements);
+      }
+    }
+
+    &__link {
+      color: var(--text);
+    }
+
+    &__button {
+      display: block;
+      max-width: 328px;
+      width: 100%;
+      margin: 0 0 30px;
+      text-decoration: none;
+    }
+
+    &__button > .button {
+      width: 100%;
+    }
+  }
+
+  .select {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+
+    &__icon {
+      display: none;
+    }
+
+    &__list {
+      width: 100%;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background-color: inherit;
+    }
+
+    &__item {
+      padding: 16px 12px 0;
+      box-sizing: border-box;
+
+      &:hover,
+      &:active {
+        background-color: inherit;
+      }
+    }
+    &__item > &__link {
+      color: var(--link-text);
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .header__button .button {
+    border: none;
+    padding: 0;
+
+    &__icon {
+      right: 0;
+    }
+
+    &__text {
+      display: none;
     }
   }
 }

@@ -96,25 +96,56 @@ body {
     }
   }
 
-  /*
-    #burger-toggler:checked ~ .burger__icon .burger__line:nth-child(1) {
-  top: 50%;
-  transform: rotate(45deg);
+  &_open &__line:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  &_open &__line:nth-child(2) {
+    transform: scale(0);
+  }
+
+  &_open &__line:nth-child(3) {
+    top: 50%;
+    width: 100%;
+    transform: rotate(-45deg);
+  }
 }
 
-#burger-toggler:checked ~ .burger__icon .burger__line:nth-child(2) {
-  transform: scale(0);
+.logo {
+  text-decoration: none;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__icon {
+    display: block;
+    width: 46px;
+    height: 46px;
+
+    &-bg {
+      fill: transparent;
+    }
+
+    &-letter {
+      fill: var(--text);
+    }
+
+    &-caption-letter {
+      fill: var(--text);
+    }
+  }
+
+  &__caption {
+    @extend %p5;
+    color: var(--text);
+  }
 }
 
-#burger-toggler:checked ~ .burger__icon .burger__line:nth-child(3) {
-  top: 50%;
-  width: 100%;
-  transform: rotate(-45deg);
-}
-  */
-}
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;

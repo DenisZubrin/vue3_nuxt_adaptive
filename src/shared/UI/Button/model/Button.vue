@@ -38,7 +38,12 @@ defineProps({
     height: 22px;
     fill: var(--filler);
     position: absolute;
+    top: calc(50% - 12px);
     right: 10px;
+
+    &_light {
+      fill: var(--text);
+    }
   }
 
   &:hover,
@@ -48,6 +53,12 @@ defineProps({
   }
   &:hover &__icon {
     fill: var(--text);
+  }
+
+  &_transparent {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--text);
   }
 }
 </style>

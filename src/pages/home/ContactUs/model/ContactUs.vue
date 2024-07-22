@@ -202,7 +202,7 @@ import Button from '@/shared/UI/Button';
       &::before {
         content: '';
         display: block;
-        margin: 0 32px 0 0;
+        margin: 0 12px 0 0;
         width: 18px;
         height: 18px;
         border: 1px solid var(--text);
@@ -289,7 +289,6 @@ import Button from '@/shared/UI/Button';
 
       &::before {
         float: left;
-        margin: 0 12px 0 0;
       }
     }
   }
