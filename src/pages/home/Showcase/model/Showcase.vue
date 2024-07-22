@@ -251,7 +251,7 @@
   }
 
   &__heading {
-    margin: 0 auto 24px;
+    margin: 0;
     @extend %h1;
     color: var(--text);
     text-align: center;
@@ -260,7 +260,7 @@
   &__description {
     @extend %p3;
     color: var(--text);
-    margin: 0 auto 38px;
+    margin: 24px auto 38px;
     text-align: center;
   }
 
@@ -302,7 +302,7 @@
     padding: 24px;
     box-sizing: border-box;
     position: relative;
-
+    
     &_big {
       max-width: 668px;
       min-height: 560px;
@@ -314,7 +314,7 @@
 
   &__container:hover &__bg {
     transform: scale(1);
-    filter: brightness(30%);
+    filter: brightness(50%);
   }
 
   &__bg {
@@ -327,7 +327,8 @@
     left: 0;
     transition: transform 0.3s ease-out;
     transform: scale(1.1);
-    filter: brightness(50%);
+    filter: brightness(70%);
+    //background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
   }
 
   &__text,
@@ -337,15 +338,9 @@
   }
 
   &__text {
-    width: calc(100% - 44px);
     display: flex;
     flex-direction: column;
-    // position: absolute;
-    // top: -24px;
-    // bottom: -50px;
-    transition: all 0.3s;
-    // transform: translateY(calc(100% - 20px - 24px)); // 20px заменить на переменную высоты заголовка
-    transform: translateY(124px);
+    transition: max-height 0.3s;
   }
 
   &__container_big &__inner {
@@ -353,28 +348,32 @@
     justify-content: space-between;
   }
 
-  &:hover &__text {
-    transform: translateY(0px);
-    // bottom: 50px;
+  &:hover &__inner {
+    max-height: 300px;
+    transition: 0.3s;
   }
 
   &__inner {
-    height: 100px;
+    max-height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__heading {
     @extend %s2;
-    margin: 0 0 24px;
+    margin: 0;
   }
 
   &__description {
     @extend %p4;
-    margin: 0 0 24px;
+    margin: 24px 0 0;
     color: var(--text);
   }
 
   &__external {
     display: flex;
+    margin: 24px 0 0;
 
     &-icon {
       width: 22px;

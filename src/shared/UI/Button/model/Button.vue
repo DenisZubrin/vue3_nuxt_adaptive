@@ -50,7 +50,9 @@ defineProps({
   &:active {
     background-color: var(--secondary);
     color: var(--text);
+    border-color: var(--secondary);
   }
+
   &:hover &__icon {
     fill: var(--text);
   }

@@ -9,7 +9,7 @@
           от небольших элементов интерьера до комплексного решения
           многофункциональных центров.
         </p>
-        <Button class="info__button" :text="'Узнать больше'">
+        <Button class="button info__button" :text="'Узнать больше'">
           <template #icon>
             <svg
               class="button__icon"
@@ -53,9 +53,9 @@
       </div>
       <div class="info__card info__picture">
         <img
+          class="info__bg"
           src="@/shared/assets/img/backgrounds/showcase_article_bg_3.png"
           alt="info bg"
-          class="info__bg"
         />
       </div>
     </div>
@@ -68,7 +68,6 @@ import Button from '@/shared/UI/Button';
 @import '@/shared/assets/styles/variables.scss';
 
 .info {
-
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -202,5 +201,4 @@ import Button from '@/shared/UI/Button';
     }
   }
 }
-
 </style>

@@ -151,9 +151,9 @@
             <NuxtLink to="#" class="link nav__link">Контакты</NuxtLink>
           </li>
         </ul>
-        <NuxtLink to="#" class="nav__button">
+        <NuxtLink to="#" class="nav__button-link">
           <Button
-            class="button button_transparent"
+            class="button button_transparent nav__button"
             type="submit"
             @submit.prevent
             :text="'Заказать проект'"
@@ -172,9 +172,9 @@
           </Button>
         </NuxtLink>
       </nav>
-      <NuxtLink to="#" class="header__button">
+      <NuxtLink to="#" class="header__button-link">
         <Button
-          class="button button_transparent"
+          class="button button_transparent header__button"
           type="submit"
           @submit.prevent
           :text="'Заказать проект'"
@@ -197,7 +197,7 @@
 </template>
 <script setup>
 import Button from '@/shared/UI/Button';
-import { ref, reactive } from 'vue';
+import { reactive } from 'vue';
 
 const state = reactive({
   menuActive: false,
@@ -213,7 +213,6 @@ const toggleMenu = () => {
 .header {
   position: fixed;
   width: 100%;
-  
   z-index: 2;
   background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5) 50%);
 
@@ -229,7 +228,7 @@ const toggleMenu = () => {
     margin: 0 0 0 10px;
   }
 
-  &__button {
+  &__button-link {
     display: none;
   }
 }
@@ -329,7 +328,7 @@ const toggleMenu = () => {
     color: var(--text);
   }
 
-  &__button {
+  &__button-link {
     display: none;
   }
 }
@@ -338,6 +337,7 @@ const toggleMenu = () => {
   .header {
     &__container {
       padding-top: 12px;
+      min-height: 60px;
     }
 
     &__nav {
@@ -366,18 +366,19 @@ const toggleMenu = () => {
     &__logo {
       position: fixed;
       left: calc(50% - 23px);
+      top: 12px;
 
       &-caption {
         display: none;
       }
     }
 
-    &__button {
+    &__button-link {
       display: block;
       text-decoration: none;
     }
 
-    &__button .button {
+    &__button {
       padding: 8px 34px 8px 16px;
       min-height: 0;
     }
@@ -408,7 +409,7 @@ const toggleMenu = () => {
       color: var(--text);
     }
 
-    &__button {
+    &__button-link {
       display: block;
       max-width: 328px;
       width: 100%;
@@ -416,7 +417,7 @@ const toggleMenu = () => {
       text-decoration: none;
     }
 
-    &__button > .button {
+    &__button {
       width: 100%;
     }
   }
@@ -454,16 +455,17 @@ const toggleMenu = () => {
 }
 
 @media screen and (max-width: 540px) {
+  .header {
+    &__button {
+      border: none;
+      padding: 0;
 
-  .header__button .button {
-    border: none;
-    padding: 0;
-
-    &__icon {
-      right: 0;
+      &__icon {
+        right: 0;
+      }
     }
 
-    &__text {
+    &__button .button__text {
       display: none;
     }
   }

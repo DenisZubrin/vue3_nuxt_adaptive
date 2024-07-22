@@ -15,23 +15,58 @@
       <form action="#" class="form contact-us__form">
         <div class="form__text">
           <div class="form__field">
-            <label for="name" class="form__label">Ваше имя*</label>
-            <input type="text" class="form__input" name="name" id="name" />
+            <label
+              for="name"
+              class="form__label"
+              :class="{ form__label_focused: state.userName }"
+              >Ваше имя*</label
+            >
+            <input
+              type="text"
+              class="form__input"
+              :class="{ form__input_focused: state.userName }"
+              name="name"
+              id="name"
+              v-model="state.userName"
+            />
+            <div class="form__error" v-if="v$.userName.$error">
+              Это поле обязательно
+            </div>
           </div>
           <div class="form__field">
-            <label for="phone" class="form__label">Телефон*</label>
-            <input type="text" class="form__input" name="phone" id="phone" />
+            <label
+              for="phone"
+              class="form__label"
+              :class="{ form__label_focused: state.userPhone }"
+              >Телефон*</label
+            >
+            <input
+              type="text"
+              class="form__input"
+              :class="{ form__input_focused: state.userPhone }"
+              name="phone"
+              id="phone"
+              v-model="state.userPhone"
+            />
+            <div class="form__error" v-if="v$.userPhone.$error">
+              Это поле обязательно
+            </div>
             <!-- placeholder="+7 (___) ___-__-__" -->
           </div>
           <div class="form__field">
-            <label for="textarea" class="form__label"
+            <label
+              for="textarea"
+              class="form__label"
+              :class="{ form__label_focused: state.userText }"
               >Расскажите нам о своем проекте</label
             >
             <input
               type="text"
               class="form__input"
+              :class="{ form__input_focused: state.userText }"
               name="textarea"
               id="textarea"
+              v-model="state.userText"
             />
           </div>
           <div class="form__agreement">
@@ -40,16 +75,19 @@
               class="form__checkbox"
               name="checkbox"
               id="checkbox"
+              v-model="state.userCheckbox"
             />
             <label for="checkbox" class="form__agreement-label"
               >Я соглашаюсь с Политикой Конфиденциальности сайта</label
             >
+            <div class="form__error" v-if="v$.userCheckbox.$error">
+              Необходимо поставить галочку
+            </div>
           </div>
         </div>
         <Button
           class="form__button"
-          type="submit"
-          @submit.prevent
+          @click.prevent="submitForm"
           :text="'Отправить'"
         >
           <template #icon> </template>
@@ -74,6 +112,35 @@
 </template>
 <script setup>
 import Button from '@/shared/UI/Button';
+import { reactive, computed } from 'vue';
+import { useVuelidate } from '@vuelidate/core';
+import { required, sameAs } from '@vuelidate/validators';
+
+const state = reactive({
+  userName: '',
+  userPhone: '',
+  userText: '',
+  userCheckbox: false,
+});
+
+const rules = computed(() => {
+  return {
+    userName: { required },
+    userPhone: { required },
+    userCheckbox: { required, sameAs: sameAs(true) },
+  };
+});
+
+const v$ = useVuelidate(rules, state);
+
+const submitForm = async () => {
+  const result = await v$.value.$validate();
+  if (result) {
+    alert('Форма отправлена');
+  } else {
+    alert('Форма не отправлена');
+  }
+};
 </script>
 <style lang="scss">
 @import '@/shared/assets/styles/variables.scss';
@@ -159,6 +226,11 @@ import Button from '@/shared/UI/Button';
     position: absolute;
     top: 20px;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &_focused {
+      top: 0;
+      color: var(--secondary);
+    }
   }
 
   &__input {
@@ -170,12 +242,16 @@ import Button from '@/shared/UI/Button';
     border: none;
     border-bottom: 1px solid var(--text);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 20px 0;
+    padding: 20px 0 12px;
     box-sizing: border-box;
 
     &::placeholder {
       @extend %p5;
       color: var(--text-elements);
+    }
+
+    &_focused {
+      border-color: var(--secondary);
     }
   }
 
@@ -231,7 +307,15 @@ import Button from '@/shared/UI/Button';
     max-width: 322px;
     width: 100%;
   }
+
+  &__error {
+    @extend %err;
+    color: var(--error);
+    position: absolute;
+    margin: 2px 0 0;
+  }
 }
+
 @media screen and (max-width: 1439px) {
   .form {
     flex-direction: column;

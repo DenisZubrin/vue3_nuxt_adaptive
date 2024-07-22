@@ -25,6 +25,8 @@
   --f-btn-l: 18px;
   --f-btn-m: 16px;
   --f-btn-s: 14px;
+  // others
+  --f-error: 12px;
 
   // colors
   --footer-bg: rgba(25, 25, 25, 1);
@@ -40,8 +42,8 @@
   --warning: rgba(221, 194, 97, 1);
   --error: rgba(243, 89, 79, 1);
   // gradients
-  --gradient-opacity-0: rgba(15, 15, 14, 0);
-  --gradient-opacity-1: rgba(15, 15, 14, 1);
+  --gradient-end: rgba(15, 15, 14, 0);
+  --gradient-start: rgba(15, 15, 14, 1);
 }
 
 //mixins
@@ -123,6 +125,9 @@
 }
 %banner_link {
   @include font(var(--f-banner-link), 1.35, 500);
+}
+%err {
+  @include font(var(--f-error), 1.2, 600);
 }
 
 @media screen and (max-width: 1024px) {

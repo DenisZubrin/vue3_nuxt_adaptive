@@ -187,13 +187,13 @@
           <a href="#" class="footer__company-link"
             ><img
               class="footer__company-logo"
-              src="../../../shared/assets/img/icons/INKOM_logo.svg"
+              src="/public/icons/INKOM_logo.svg"
               alt="INKOM logo"
           /></a>
           <a href="#" class="footer__company-link"
             ><img
               class="footer__company-logo"
-              src="../../../shared/assets/img/icons/match_logo.svg"
+              src="/public/icons/MATCH_logo.svg"
               alt="MATCH logo"
           /></a>
         </div>
@@ -332,6 +332,7 @@
 
   &__created-by {
     display: flex;
+    align-items: center;
     gap: 24px;
   }
 
@@ -429,6 +430,10 @@
     &__created-by {
       flex-direction: column;
       gap: 12px;
+    }
+
+    &__created-by {
+      align-items: start;
     }
   }
 }
