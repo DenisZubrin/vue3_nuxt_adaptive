@@ -151,37 +151,15 @@
             <NuxtLink to="#" class="link nav__link">Контакты</NuxtLink>
           </li>
         </ul>
-        <NuxtLink to="#" class="nav__button-link">
-          <Button
-            class="button button_transparent nav__button"
-            type="submit"
-            @submit.prevent
-            :text="'Заказать проект'"
-          >
-            <template #icon
-              ><svg
-                class="button__icon button__icon_light"
-                viewBox="0 0 22 22"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
-                />
-              </svg>
-            </template>
-          </Button>
-        </NuxtLink>
-      </nav>
-      <NuxtLink to="#" class="header__button-link">
         <Button
-          class="button button_transparent header__button"
+          class="button button_transparent nav__button"
           type="submit"
           @submit.prevent
           :text="'Заказать проект'"
         >
           <template #icon
             ><svg
-              class="button__icon button__icon_light header__button-icon"
+              class="button__icon button__icon_light"
               viewBox="0 0 22 22"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -191,7 +169,25 @@
             </svg>
           </template>
         </Button>
-      </NuxtLink>
+      </nav>
+      <Button
+        class="button button_transparent header__button"
+        type="submit"
+        @submit.prevent
+        :text="'Заказать проект'"
+      >
+        <template #icon
+          ><svg
+            class="button__icon button__icon_light header__button-icon"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.1874 5.5V14.4375C17.1874 14.6198 17.115 14.7947 16.986 14.9236C16.8571 15.0526 16.6822 15.125 16.4999 15.125C16.3176 15.125 16.1427 15.0526 16.0138 14.9236C15.8848 14.7947 15.8124 14.6198 15.8124 14.4375V7.15945L5.9863 16.9864C5.8573 17.1154 5.68233 17.1879 5.49989 17.1879C5.31746 17.1879 5.14249 17.1154 5.01349 16.9864C4.88448 16.8574 4.81201 16.6824 4.81201 16.5C4.81201 16.3176 4.88448 16.1426 5.01349 16.0136L14.8404 6.1875H7.56239C7.38006 6.1875 7.20519 6.11507 7.07626 5.98614C6.94733 5.8572 6.87489 5.68234 6.87489 5.5C6.87489 5.31766 6.94733 5.1428 7.07626 5.01386C7.20519 4.88493 7.38006 4.8125 7.56239 4.8125H16.4999C16.6822 4.8125 16.8571 4.88493 16.986 5.01386C17.115 5.1428 17.1874 5.31766 17.1874 5.5Z"
+            />
+          </svg>
+        </template>
+      </Button>
     </div>
   </header>
 </template>
@@ -228,7 +224,7 @@ const toggleMenu = () => {
     margin: 0 0 0 10px;
   }
 
-  &__button-link {
+  &__button {
     display: none;
   }
 }
@@ -328,7 +324,7 @@ const toggleMenu = () => {
     color: var(--text);
   }
 
-  &__button-link {
+  &__button {
     display: none;
   }
 }
@@ -345,10 +341,10 @@ const toggleMenu = () => {
       visibility: hidden;
       position: fixed;
       top: 0;
-      left: 0;
+      left: -100%;
       z-index: 2;
-      width: 0;
-      height: 0;
+      width: 100%;
+      height: 100%;
       background: var(--page-bg);
       display: flex;
       flex-direction: column;
@@ -359,8 +355,7 @@ const toggleMenu = () => {
       &_mobile {
         opacity: 1;
         visibility: visible;
-        width: 100%;
-        height: 100%;
+        left: 0;
       }
     }
 
@@ -379,12 +374,8 @@ const toggleMenu = () => {
       }
     }
 
-    &__button-link {
-      display: block;
-      text-decoration: none;
-    }
-
     &__button {
+      display: block;
       padding: 8px 34px 8px 16px;
       min-height: 0;
     }
@@ -415,16 +406,12 @@ const toggleMenu = () => {
       color: var(--text);
     }
 
-    &__button-link {
+    &__button {
       display: block;
       max-width: 328px;
       width: 100%;
       margin: 0 0 30px;
       text-decoration: none;
-    }
-
-    &__button {
-      width: 100%;
     }
   }
 

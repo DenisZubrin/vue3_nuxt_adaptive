@@ -16,9 +16,9 @@ export default defineNuxtConfig({
   // router: {
   //   base: '/vue3_nuxt_adaptive/'
   // },
-  app: {
-    baseURL: '/vue3_nuxt_adaptive/'
-  },
+  // app: {
+  //   baseURL: '/vue3_nuxt_adaptive/'
+  // },
   nitro: {
     prerender: {
       crawlLinks: true,
