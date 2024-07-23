@@ -167,13 +167,13 @@ const submitForm = async () => {
   &__heading {
     margin: 0 0 24px;
     @extend %h1;
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__description {
     margin: 0 0 48px;
     @extend %p4;
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__link-to-top {
@@ -185,7 +185,7 @@ const submitForm = async () => {
   &__arrow-icon {
     width: 32px;
     height: 32px;
-    fill: var(--text);
+    fill: var(--c-text);
 
     &:hover {
       fill: var(secondary);
@@ -214,14 +214,14 @@ const submitForm = async () => {
 
   &__label {
     @extend %p5;
-    color: var(--text-elements);
+    color: var(--c-text-elements);
     position: absolute;
     top: 20px;
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     &_focused {
       top: 0;
-      color: var(--secondary);
+      color: var(--c-secondary);
     }
   }
 
@@ -230,30 +230,30 @@ const submitForm = async () => {
     background: inherit;
     outline: none;
     @extend %s4;
-    color: var(--text);
+    color: var(--c-text);
     border: none;
-    border-bottom: 1px solid var(--text);
+    border-bottom: 1px solid var(--c-text);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 20px 0 12px;
     box-sizing: border-box;
 
     &::placeholder {
       @extend %p5;
-      color: var(--text-elements);
+      color: var(--c-text-elements);
     }
 
     &_focused {
-      border-color: var(--secondary);
+      border-color: var(--c-secondary);
     }
   }
 
   &__input:focus {
-    border-bottom: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--c-secondary);
   }
 
   &__field:focus-within &__label {
     top: 0;
-    color: var(--secondary);
+    color: var(--c-secondary);
   }
 
   &__agreement {
@@ -264,7 +264,7 @@ const submitForm = async () => {
       align-items: center;
       justify-content: start;
       @extend %p5;
-      color: var(--text-elements);
+      color: var(--c-text-elements);
 
       &::before {
         content: '';
@@ -272,7 +272,7 @@ const submitForm = async () => {
         margin: 0 12px 0 0;
         width: 18px;
         height: 18px;
-        border: 1px solid var(--text);
+        border: 1px solid var(--c-text);
         border-radius: 2px;
         box-sizing: border-box;
         transition-duration: 0.3s;
@@ -287,8 +287,8 @@ const submitForm = async () => {
 
   &__checkbox:checked + &__agreement-label::before {
     background-image: url('@/shared/assets/img/icons/Check.svg');
-    background-color: var(--secondary);
-    border-color: var(--secondary);
+    background-color: var(--c-secondary);
+    border-color: var(--c-secondary);
   }
 
   &__button {
@@ -301,7 +301,7 @@ const submitForm = async () => {
 
   &__error {
     @extend %err;
-    color: var(--error);
+    color: var(--c-error);
     position: absolute;
     margin: 2px 0 0;
   }
@@ -376,9 +376,9 @@ const submitForm = async () => {
     &__checkbox:checked + &__agreement-label::before {
       background-image: url('@/shared/assets/img/icons/Check_alternative.svg');
       background-position: -1px -1px;
-      background-color: var(--text);
+      background-color: var(--c-text);
       color: transparent;
-      border-color: var(--text);
+      border-color: var(--c-text);
     }
   }
 }

@@ -19,12 +19,12 @@ defineProps({
   border-radius: 8px;
   min-height: 53px;
   box-sizing: border-box;
-  background-color: var(--text);
+  background-color: var(--c-text);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 42px;
-  color: var(--filler);
+  color: var(--c-filler);
   position: relative;
   cursor: pointer;
 
@@ -36,31 +36,31 @@ defineProps({
   &__icon {
     width: 22px;
     height: 22px;
-    fill: var(--filler);
+    fill: var(--c-filler);
     position: absolute;
     top: calc(50% - 12px);
     right: 10px;
 
     &_light {
-      fill: var(--text);
+      fill: var(--c-text);
     }
   }
 
   &:hover,
   &:active {
-    background-color: var(--secondary);
-    color: var(--text);
-    border-color: var(--secondary);
+    background-color: var(--c-secondary);
+    color: var(--c-text);
+    border-color: var(--c-secondary);
   }
 
   &:hover &__icon {
-    fill: var(--text);
+    fill: var(--c-text);
   }
 
   &_transparent {
     background-color: transparent;
-    color: var(--text);
-    border: 1px solid var(--text);
+    color: var(--c-text);
+    border: 1px solid var(--c-text);
   }
 }
 </style>

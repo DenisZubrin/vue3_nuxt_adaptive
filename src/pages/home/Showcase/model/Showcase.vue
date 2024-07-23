@@ -253,13 +253,13 @@
   &__heading {
     margin: 0;
     @extend %h1;
-    color: var(--text);
+    color: var(--c-text);
     text-align: center;
   }
 
   &__description {
     @extend %p3;
-    color: var(--text);
+    color: var(--c-text);
     margin: 24px auto 38px;
     text-align: center;
   }
@@ -291,7 +291,7 @@
   text-decoration: none;
   overflow: hidden;
   border-radius: 8px;
-  background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
+  background: linear-gradient(to top right, var(--c-gradient-start), var(--c-gradient-end));
 
   &__container {
     max-width: 437px;
@@ -334,7 +334,7 @@
   &__text,
   &__external {
     z-index: 1;
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__text {
@@ -367,7 +367,7 @@
   &__description {
     @extend %p4;
     margin: 24px 0 0;
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__external {
@@ -377,7 +377,7 @@
     &-icon {
       width: 22px;
       height: 22px;
-      fill: var(--text);
+      fill: var(--c-text);
     }
   }
 }

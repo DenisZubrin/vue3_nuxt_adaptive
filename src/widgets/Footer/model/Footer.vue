@@ -206,7 +206,7 @@
 @import '@/shared/assets/styles/variables.scss';
 
 .footer {
-  background-color: var(--footer-bg);
+  background-color: var(--c-footer-bg);
 
   &__container {
     padding: 40px;
@@ -266,12 +266,12 @@
   }
 
   &__link {
-    color: var(--link-text);
+    color: var(--c-link-text);
     @extend %p4;
 
     &_highlighted {
       @extend %s4;
-      color: var(--text);
+      color: var(--c-text);
     }
   }
 
@@ -281,12 +281,12 @@
 
   &__phone,
   &__email {
-    color: var(--text);
+    color: var(--c-text);
     display: inline-block;
     margin: 0 0 12px;
 
     &:hover {
-      color: var(--secondary);
+      color: var(--c-secondary);
     }
   }
 
@@ -304,18 +304,18 @@
     @extend %p4;
 
     &-building {
-      color: var(--text);
+      color: var(--c-text);
       display: block;
       width: 100%;
     }
 
     &-worktime {
-      color: var(--link-text);
+      color: var(--c-link-text);
     }
   }
 
   &__terms {
-    border-top: 1px solid var(--link-text);
+    border-top: 1px solid var(--c-link-text);
     padding: 32px 0 0 0;
     display: flex;
     flex-wrap: wrap;

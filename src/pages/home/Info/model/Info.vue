@@ -91,18 +91,18 @@ import Button from '@/shared/UI/Button';
 
   &__heading {
     @extend %h3;
-    color: var(--text);
+    color: var(--c-text);
     margin: 0;
   }
 
   &__description {
     @extend %p3;
-    color: var(--text);
+    color: var(--c-text);
     margin: 0;
   }
 
   &__achievments {
-    background-color: var(--filler);
+    background-color: var(--c-filler);
     padding: 44px 32px;
   }
 
@@ -112,12 +112,12 @@ import Button from '@/shared/UI/Button';
 
   &__text {
     @extend %p4;
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__number {
     @extend %num;
-    color: var(--text);
+    color: var(--c-text);
     display: block;
   }
 

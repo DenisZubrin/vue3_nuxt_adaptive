@@ -238,12 +238,12 @@ const toggleMenu = () => {
   &__link:hover ~ &__icon {
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: rotate(0deg);
-    fill: var(--secondary);
+    fill: var(--c-secondary);
   }
 
   &__icon {
     margin: 0 0 0 4px;
-    fill: var(--text);
+    fill: var(--c-text);
     width: 16px;
     height: 16px;
     transform: scale(1, -1);
@@ -263,7 +263,7 @@ const toggleMenu = () => {
     left: -12px;
     list-style-type: none;
     border-radius: 8px;
-    background-color: var(--filler);
+    background-color: var(--c-filler);
     min-width: 252px;
     padding: 0;
 
@@ -278,7 +278,7 @@ const toggleMenu = () => {
 
     &:hover,
     &:active {
-      background-color: var(--secondary);
+      background-color: var(--c-secondary);
     }
 
     &:first-child {
@@ -289,13 +289,13 @@ const toggleMenu = () => {
     }
   }
   &__link {
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__item > &__link {
     &:hover,
     &:active {
-      color: var(--text);
+      color: var(--c-text);
 
       &::before {
         display: none;
@@ -321,7 +321,7 @@ const toggleMenu = () => {
   }
 
   &__link {
-    color: var(--text);
+    color: var(--c-text);
   }
 
   &__button {
@@ -345,7 +345,7 @@ const toggleMenu = () => {
       z-index: 2;
       width: 100%;
       height: 100%;
-      background: var(--page-bg);
+      background: var(--c-page-bg);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -389,7 +389,7 @@ const toggleMenu = () => {
     }
 
     &__item {
-      border-top: 1px solid var(--text-elements);
+      border-top: 1px solid var(--c-text-elements);
       width: 100%;
       padding: 16px;
 
@@ -398,12 +398,12 @@ const toggleMenu = () => {
       }
 
       &:last-child {
-        border-bottom: 1px solid var(--text-elements);
+        border-bottom: 1px solid var(--c-text-elements);
       }
     }
 
     &__link {
-      color: var(--text);
+      color: var(--c-text);
     }
 
     &__button {
@@ -442,7 +442,7 @@ const toggleMenu = () => {
       }
     }
     &__item > &__link {
-      color: var(--link-text);
+      color: var(--c-link-text);
     }
   }
 }

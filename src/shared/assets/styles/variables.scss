@@ -29,21 +29,21 @@
   --f-error: 12px;
 
   // colors
-  --footer-bg: rgba(25, 25, 25, 1);
-  --secondary: rgba(144, 159, 69, 1);
-  --page-bg: rgba(31, 31, 31, 1);
-  --filler: rgba(41, 41, 41, 1);
-  --link-text: rgba(133, 133, 133, 1);
-  --text: rgba(238, 238, 238, 1);
-  --text-elements: rgba(194, 194, 194, 1);
-  --pagination-element: rgba(255, 255, 255, 1);
+  --c-footer-bg: rgba(25, 25, 25, 1);
+  --c-secondary: rgba(144, 159, 69, 1);
+  --c-page-bg: rgba(31, 31, 31, 1);
+  --c-filler: rgba(41, 41, 41, 1);
+  --c-link-text: rgba(133, 133, 133, 1);
+  --c-text: rgba(238, 238, 238, 1);
+  --c-text-elements: rgba(194, 194, 194, 1);
+  --c-pagination-element: rgba(255, 255, 255, 1);
   // statuses
-  --success: rgba(152, 191, 68, 1);
-  --warning: rgba(221, 194, 97, 1);
-  --error: rgba(243, 89, 79, 1);
+  --c-success: rgba(152, 191, 68, 1);
+  --c-warning: rgba(221, 194, 97, 1);
+  --c-error: rgba(243, 89, 79, 1);
   // gradients
-  --gradient-end: rgba(15, 15, 14, 0);
-  --gradient-start: rgba(15, 15, 14, 1);
+  --c-gradient-end: rgba(15, 15, 14, 0);
+  --c-gradient-start: rgba(15, 15, 14, 1);
 }
 
 //mixins

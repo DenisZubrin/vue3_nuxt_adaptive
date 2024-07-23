@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background-color: var(--page-bg);
+  background-color: var(--c-page-bg);
   font-family: 'Inter';
 }
 
@@ -40,7 +40,7 @@ body {
   position: relative;
   text-decoration: none;
   @extend %p4;
-  color: var(--link-text);
+  color: var(--c-link-text);
   cursor: pointer;
 
   &::before {
@@ -51,14 +51,14 @@ body {
     bottom: -2px;
     height: 1px;
     left: 0;
-    background-color: var(--secondary);
+    background-color: var(--c-secondary);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
-    color: var(--secondary);
+    color: var(--c-secondary);
   }
 
   &:hover::before {
@@ -76,7 +76,7 @@ body {
     z-index: 2;
 
   &__line {
-    background-color: var(--text);
+    background-color: var(--c-text);
     height: 1px;
     position: absolute;
     transition: 0.3s;
@@ -132,17 +132,17 @@ body {
     }
 
     &-letter {
-      fill: var(--text);
+      fill: var(--c-text);
     }
 
     &-caption-letter {
-      fill: var(--text);
+      fill: var(--c-text);
     }
   }
 
   &__caption {
     @extend %p5;
-    color: var(--text);
+    color: var(--c-text);
   }
 }
 

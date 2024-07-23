@@ -87,13 +87,13 @@ defineProps({
 
   &__heading {
     @extend %h1;
-    color: var(--text);
+    color: var(--c-text);
     margin: 0 0 24px;
   }
 
   &__description {
     @extend %p3;
-    color: var(--text);
+    color: var(--c-text);
     margin: 0;
     width: 85%;
   }
@@ -113,35 +113,35 @@ defineProps({
     display: flex;
     justify-content: end;
     align-items: center;
-    border-top: 1px solid var(--text-elements);
+    border-top: 1px solid var(--c-text-elements);
 
     &:last-child {
-      border-bottom: 1px solid var(--text-elements);
+      border-bottom: 1px solid var(--c-text-elements);
     }
   }
 
   &__link {
     @extend %s3;
-    color: var(--text);
+    color: var(--c-text);
     text-decoration: none;
 
     &-icon {
       width: 22px;
       height: 22px;
-      fill: var(--text);
+      fill: var(--c-text);
       position: relative;
       top: -1px;
       left: 3px;
     }
 
     &:hover {
-      color: var(--secondary);
+      color: var(--c-secondary);
       transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 
   &__link:hover ~ &__link-icon {
-    fill: var(--secondary);
+    fill: var(--c-secondary);
     transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -188,7 +188,7 @@ defineProps({
       width: 22px;
       height: 22px;
       z-index: 1;
-      fill: var(--text-elements);
+      fill: var(--c-text-elements);
       animation: pulse 2s infinite;
     }
   }
