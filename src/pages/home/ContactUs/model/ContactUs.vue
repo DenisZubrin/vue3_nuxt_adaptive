@@ -41,7 +41,7 @@
               >Телефон*</label
             >
             <input
-              type="tel"
+              type="number"
               class="form__input"
               :class="{ form__input_focused: state.userPhone }"
               name="phone"

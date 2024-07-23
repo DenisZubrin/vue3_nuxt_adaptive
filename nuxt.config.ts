@@ -18,5 +18,11 @@ export default defineNuxtConfig({
   // },
   app: {
     baseURL: '/vue3_nuxt_adaptive/'
-  }
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false, 
+    },
+  },
 });
