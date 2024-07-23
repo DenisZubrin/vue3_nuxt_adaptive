@@ -13,4 +13,16 @@ export default defineNuxtConfig({
     layouts: './src/app/layouts',
   },
   modules: ['@nuxt/eslint'],
+  // router: {
+  //   base: '/vue3_nuxt_adaptive/'
+  // },
+  // app: {
+  //   baseURL: '/vue3_nuxt_adaptive/'
+  // },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false, 
+    },
+  },
 });
