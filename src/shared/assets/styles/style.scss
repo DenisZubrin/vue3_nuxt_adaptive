@@ -1,3 +1,6 @@
+@import './reset.min.css';
+@import '@/shared/assets/styles/variables.scss';
+
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/inter/static/Inter-Regular.ttf');
@@ -16,10 +19,136 @@
   font-weight: 600;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  background-color: var(--page-bg);
+  font-family: 'Inter';
+}
+
+.container {
   margin: 0 auto;
   max-width: 1440px;
   width: 100%;
-  background-color: black;
-  font-family: 'Inter';
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  @extend %p4;
+  color: var(--link-text);
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: -2px;
+    height: 1px;
+    left: 0;
+    background-color: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    color: var(--secondary);
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.burger {
+  display: none;
+    position: relative;
+    cursor: pointer;
+    width: 26px;
+    height: 19px;
+    z-index: 2;
+
+  &__line {
+    background-color: var(--text);
+    height: 1px;
+    position: absolute;
+    transition: 0.3s;
+
+    &:nth-child(1) {
+      top: 0;
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      width: 60%;
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      width: 30%;
+    }
+  }
+
+  &_open &__line:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  &_open &__line:nth-child(2) {
+    transform: scale(0);
+  }
+
+  &_open &__line:nth-child(3) {
+    top: 50%;
+    width: 100%;
+    transform: rotate(-45deg);
+  }
+}
+
+.logo {
+  text-decoration: none;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__icon {
+    display: block;
+    width: 46px;
+    height: 46px;
+
+    &-bg {
+      fill: transparent;
+    }
+
+    &-letter {
+      fill: var(--text);
+    }
+
+    &-caption-letter {
+      fill: var(--text);
+    }
+  }
+
+  &__caption {
+    @extend %p5;
+    color: var(--text);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
