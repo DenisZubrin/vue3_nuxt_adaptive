@@ -333,18 +333,6 @@ const toggleMenu = () => {
   }
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 @media screen and (max-width: 1136px) {
   .header {
     &__container {
@@ -353,21 +341,26 @@ const toggleMenu = () => {
     }
 
     &__nav {
-      display: none;
-      
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 0;
+      height: 0;
+      background: var(--page-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.4s ease-in-out;
+
       &_mobile {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
+        opacity: 1;
+        visibility: visible;
         width: 100%;
         height: 100%;
-        background: var(--page-bg);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        animation: appear 0.5s;
       }
     }
 

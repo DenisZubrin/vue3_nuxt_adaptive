@@ -291,6 +291,7 @@
   text-decoration: none;
   overflow: hidden;
   border-radius: 8px;
+  background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
 
   &__container {
     max-width: 437px;
@@ -315,6 +316,7 @@
   &__container:hover &__bg {
     transform: scale(1);
     filter: brightness(50%);
+    transition: 0.3s;
   }
 
   &__bg {
@@ -322,13 +324,11 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s;
     transform: scale(1.1);
-    filter: brightness(70%);
-    // background: linear-gradient(to top right, var(--gradient-start), var(--gradient-end));
   }
 
   &__text,
@@ -340,7 +340,6 @@
   &__text {
     display: flex;
     flex-direction: column;
-    transition: max-height 0.3s;
   }
 
   &__container_big &__inner {
@@ -350,12 +349,12 @@
 
   &:hover &__inner {
     max-height: 300px;
-    transition: 0.3s;
+    transition: max-height 0.5s;
   }
 
   &__inner {
     max-height: 0;
-    transition: 0.3s;
+    transition: max-height 0.3s;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -413,10 +412,6 @@
 
     &__text {
       width: 100%;
-    }
-
-    &__description {
-      margin: 0;
     }
   }
 }

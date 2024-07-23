@@ -17,7 +17,7 @@ defineProps({
 .button {
   border: none;
   border-radius: 8px;
-  min-height: 60px;
+  min-height: 53px;
   box-sizing: border-box;
   background-color: var(--text);
   display: flex;

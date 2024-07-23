@@ -1,5 +1,5 @@
 <template>
-  <section class="main-screen" name="main-screen">
+  <section id="main-screen" class="main-screen">
     <swiper
       :direction="'vertical'"
       :slides-per-view="1"
@@ -11,6 +11,7 @@
       }"
       :watchSlidesProgress="true"
       @slideNextTransitionEnd="onLastSlide"
+      :speed="1000"
     >
       <swiper-slide v-for="(slide, index) in slides" :key="index">
         <Slide

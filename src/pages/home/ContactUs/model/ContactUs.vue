@@ -41,7 +41,7 @@
               >Телефон*</label
             >
             <input
-              type="text"
+              type="tel"
               class="form__input"
               :class="{ form__input_focused: state.userPhone }"
               name="phone"
@@ -51,7 +51,6 @@
             <div class="form__error" v-if="v$.userPhone.$error">
               Это поле обязательно
             </div>
-            <!-- placeholder="+7 (___) ___-__-__" -->
           </div>
           <div class="form__field">
             <label
@@ -89,9 +88,7 @@
           class="form__button"
           @click.prevent="submitForm"
           :text="'Отправить'"
-        >
-          <template #icon> </template>
-        </Button>
+        />
       </form>
       <a class="contact-us__link-to-top" href="#main-screen">
         <svg
@@ -112,7 +109,7 @@
 </template>
 <script setup>
 import Button from '@/shared/UI/Button';
-import { reactive, computed } from 'vue';
+import { reactive, computed, onMounted } from 'vue';
 import { useVuelidate } from '@vuelidate/core';
 import { required, sameAs } from '@vuelidate/validators';
 
@@ -134,12 +131,7 @@ const rules = computed(() => {
 const v$ = useVuelidate(rules, state);
 
 const submitForm = async () => {
-  const result = await v$.value.$validate();
-  if (result) {
-    alert('Форма отправлена');
-  } else {
-    alert('Форма не отправлена');
-  }
+  await v$.value.$validate();
 };
 </script>
 <style lang="scss">
@@ -265,7 +257,6 @@ const submitForm = async () => {
   }
 
   &__agreement {
-    width: 100%;
 
     &-label {
       display: flex;
@@ -303,7 +294,7 @@ const submitForm = async () => {
   &__button {
     border: none;
     cursor: pointer;
-    padding: 20px 118px;
+    padding: 16px 118px;
     max-width: 322px;
     width: 100%;
   }
